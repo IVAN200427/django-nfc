@@ -1,0 +1,138 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+{{ product.title }} | NFC Industrial
+{% endblock %}
+
+{% block meta_description %}
+{{ product.title }} manufactured by NFC Industrial.
+{{ product.description|truncatewords:25 }}
+{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6">
+  <div class="product-image-wrapper">
+    {% if product.image %}
+      <img
+        src="{{ product.image.url }}"
+        class="img-fluid product-detail-image"
+        alt="{{ product.title }}"
+        loading="lazy" />
+    {% else %}
+      <img
+        src="{% static 'images/no-image.png' %}"
+        class="img-fluid product-detail-image"
+        alt="No image available"
+        loading="lazy" />
+    {% endif %}
+  </div>
+</div>
+
+      <div class="col-lg-6">
+        <span class="product-detail-category">
+          {{ product.category.name }}
+        </span>
+
+        <h1 class="product-detail-title mt-3">{{ product.title }}</h1>
+
+        <p class="product-detail-description">{{ product.description }}</p>
+
+        <div class="specifications-card">
+          <h4 class="mb-4">Technical Specifications</h4>
+
+          <div class="spec-item">
+            <span class="spec-label"> Inlet Size </span>
+            <span class="spec-value"> {{ product.inlet_size }} </span>
+          </div>
+
+          <div class="spec-item">
+            <span class="spec-label"> Finish </span>
+            <span class="spec-value"> {{ product.finish }} </span>
+          </div>
+          
+
+          <div class="spec-item">
+            <span class="spec-label"> Category </span>
+            <span class="spec-value"> {{ product.category.name }} </span>
+          </div>
+        </div>
+
+        <div class="quote-card mt-4">
+          <h4 class="mb-4">Request Bulk Quote</h4>
+
+          <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+              <label class="form-label"> Your Name </label>
+              {{ form.customer_name }}
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Company Name </label>
+              {{ form.company_name }}
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Email Address </label>
+              {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Phone Number </label>
+              {{ form.phone_number }}
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label"> Message us </label>
+              {{ form.message }}
+            </div>
+
+            <button type="submit" class="btn btn-nfc w-100">
+              Submit Quote Inquiry
+            </button>
+            <a
+href="https://wa.me/263779563090?text=Hello NFC I am interested in {{ product.name }}"
+target="_blank"
+class="btn btn-success"
+>
+WhatsApp Inquiry
+</a>
+            
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Related Products</h2>
+      <p class="section-subtitle mx-auto">
+        Explore additional industrial fittings and engineering solutions from NFC.
+      </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      {% for related in related_products %} 
+        <div class="col">
+          {% include 'catalog/includes/product_card.html' with product=related %} 
+        </div>
+      {% empty %}
+        <div class="col-12 text-center text-muted">
+          <p>No related industrial items found in this category loop layout.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

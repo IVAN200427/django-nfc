@@ -1,0 +1,82 @@
+{% extends 'catalog/base.html' %} {% block title %} Contact NFC Industrial
+{%endblock %} {% block content %}
+
+<section class="container py-5">
+  <div class="row">
+    <!-- CONTACT DETAILS -->
+
+    <div class="col-lg-5">
+      <h1 class="section-title">Contact Us</h1>
+
+      <p class="lead">
+        Reach out to our sales and support team for industrial product
+        inquiries.
+      </p>
+
+      <hr />
+
+      <h5>Office Address</h5>
+
+      <p>
+        50 Galloway Road<br />
+        Norton, Zimbabwe
+      </p>
+
+      <h5>Email</h5>
+
+      <p>vumimoyo@gmail.com</p>
+
+      <h5>Phone</h5>
+
+      <p>+263 714719387/+263 773 390 355</p>
+    </div>
+
+    <!-- CONTACT FORM -->
+
+    <div class="col-lg-7">
+      <div class="card shadow border-0">
+        <div class="card-body p-4">
+          <h3 class="mb-4">Send Us a Message</h3>
+
+          <form method="POST">
+
+    {% csrf_token %}
+            <div class="row">
+              <div class="mb-3">
+
+    {{ form.full_name }}
+
+</div>
+
+<div class="mb-3">
+
+    {{ form.email }}
+
+</div>
+
+<div class="mb-3">
+
+    {{ form.subject }}
+
+</div>
+
+<div class="mb-3">
+
+    {{ form.message }}
+
+</div>
+            </div>
+
+            <button class="btn btn-nfc btn-lg" type="submit">
+              Send Message
+            </button>
+          <form method="POST">
+
+    {% csrf_token %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

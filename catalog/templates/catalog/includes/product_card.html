@@ -1,0 +1,50 @@
+{% load static %}
+
+<div class="card product-card border-0 shadow-sm h-100">
+
+    <a href="{% url 'product_detail' product.slug %}">
+
+        {% if product.image %}
+            <img
+                src="{{ product.image.url }}"
+                class="card-img-top product-image"
+                alt="{{ product.title }}"
+                loading="lazy"
+            >
+        {% else %}
+            <img
+                src="{% static 'images/no-image.png' %}"
+                class="card-img-top product-image"
+                alt="No image available"
+                loading="lazy"
+            >
+        {% endif %}
+
+    </a>
+
+    <div class="card-body p-4 d-flex flex-column">
+
+        <span class="product-category">
+            {{ product.category.name }}
+        </span>
+
+        <h5 class="product-title mt-2">
+            {{ product.title }}
+        </h5>
+
+        <p class="text-muted">
+            {{ product.inlet_size }} • {{ product.finish }}
+        </p>
+
+        <div class="mt-auto">
+            <a
+                href="{% url 'product_detail' product.slug %}"
+                class="btn btn-outline-primary w-100"
+            >
+                View Product
+            </a>
+        </div>
+
+    </div>
+
+</div>

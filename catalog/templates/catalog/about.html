@@ -1,0 +1,133 @@
+{% extends 'catalog/base.html' %}
+{% load static %}
+
+{% block title %}
+About NFC Industrial
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="container py-5">
+    <div class="row align-items-center g-5">
+
+        <div class="col-12 col-md-6">
+            <h1 class="section-title mb-4">
+                About Non-Ferrous Casting
+            </h1>
+
+            <p class="lead">
+                Non-Ferrous Casting (NFC) is a proudly Zimbabwean industrial
+                manufacturing company based in Norton, specializing in premium
+                brass plumbing fittings, industrial valves, taps, mixers, and
+                engineering castings.
+            </p>
+
+            <p>
+                For years, NFC has supplied reliable brass products to
+                commercial, municipal, institutional, and infrastructure
+                projects throughout Zimbabwe and beyond.
+            </p>
+
+            <p>
+                Through a combination of skilled craftsmanship, advanced
+                manufacturing techniques, and strict quality standards, we
+                continue to deliver durable engineering solutions designed for
+                demanding industrial environments.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <img
+                src="{% static 'catalog/images/molding.jpeg' %}"
+                alt="NFC Manufacturing Team"
+                class="img-fluid rounded shadow"
+            >
+        </div>
+
+    </div>
+</section>
+
+<!-- MACHINING SECTION -->
+<section class="container my-5">
+    <div class="row align-items-center g-5">
+
+        <div class="col-12 col-md-6">
+            <h2 class="mb-4">
+                Precision Machining & Engineering
+            </h2>
+
+            <p>
+                After casting, our components move through a rigorous machining
+                process where skilled operators utilize heavy-duty industrial
+                equipment, precision lathes, drilling systems, and specialized
+                tooling.
+            </p>
+
+            <p>
+                Every fitting, valve, mixer, and plumbing component is machined
+                to exact engineering specifications, ensuring dimensional
+                accuracy, smooth operation, and long-term reliability in the
+                field.
+            </p>
+
+            <p>
+                Our machining department combines technical expertise with
+                modern manufacturing practices to transform raw castings into
+                precision-engineered products ready for installation in
+                commercial and industrial applications.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <img
+                src="{% static 'catalog/images/workers3.jpeg' %}"
+                alt="Precision Machining Operations"
+                class="img-fluid rounded shadow"
+            >
+        </div>
+
+    </div>
+</section>
+
+<!-- QUALITY & FINISHING SECTION -->
+<section class="container my-5 pb-5">
+    <div class="row align-items-center g-5">
+
+        <div class="col-12 col-md-6">
+            <img
+                src="{% static 'catalog/images/finishing.jpeg' %}"
+                alt="Quality Inspection and Finishing"
+                class="img-fluid rounded shadow"
+            >
+        </div>
+
+        <div class="col-12 col-md-6">
+            <h2 class="mb-4">
+                Quality Control & Finishing
+            </h2>
+
+            <p>
+                Quality assurance is embedded throughout every stage of our
+                manufacturing process. Each product undergoes detailed physical
+                inspection to verify dimensional accuracy, finish quality, and
+                functional performance.
+            </p>
+
+            <p>
+                Our finishing specialists carefully grind, polish, and refine
+                components to meet NFC's exact standards while maintaining the
+                strength and integrity of the material.
+            </p>
+
+            <p>
+                The result is a range of industrial brass products engineered
+                for durability, corrosion resistance, and dependable
+                performance even in harsh operating environments.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+{{ category.name }} | NFC Industrial
+{% endblock %}
+
+{% block meta_description %}
+Browse {{ category.name }} manufactured by NFC Industrial.
+Premium industrial brass fittings and plumbing solutions for commercial applications.
+{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+  <h1 class="section-title">{{ category.name }}</h1>
+
+  <div class="row g-4">
+    {% for product in page_obj %}
+    <div class="col-md-4">
+      <div class="card product-card">
+
+        <img
+          src="{{ product.image.url }}"
+          class="card-img-top"
+          alt="{{ product.name }}"
+        >
+
+        <div class="card-body">
+          <h5>{{ product.name }}</h5>
+
+          <a
+            href="{% url 'product_detail' product.slug %}"
+            class="btn btn-primary"
+          >
+            View Product
+          </a>
+
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

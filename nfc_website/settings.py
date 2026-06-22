@@ -31,11 +31,8 @@ DEBUG = config('DEBUG', cast=bool)
 
 # settings.py around line 32
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default="127.0.0.1,localhost",
-    cast=lambda v: [s.strip() for s in v.split(',')]
-)
+# Temporary bypass for the client demo tunnel
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'keg-confident-slouchy.ngrok-free.dev', '.ngrok-free.dev', '*']
 
 # Application definition
 
@@ -194,3 +191,5 @@ if not DEBUG:
         },
     },
 }
+    # Trust the ngrok secure link for form submissions
+CSRF_TRUSTED_ORIGINS = ['https://keg-confident-slouchy.ngrok-free.dev']

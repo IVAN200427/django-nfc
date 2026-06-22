@@ -5,3 +5,13 @@ db.sqlite3
 .env
 media/
 staticfiles/
+# OS files (prevents hidden system files from leaking in)
+.DS_Store
+Thumbs.db
+
+# IDE and Editor configurations (keeps your personal VS Code settings out of the repo)
+.vscode/
+.idea/
+
+# Local history or backup tools
+.history/

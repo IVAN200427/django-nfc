@@ -1,15 +1,21 @@
+{% load static %}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
+
     <!-- LOGO -->
-
-    <a class="navbar-brand fw-bold" href="/">
-      <span class="text-primary"> NFC </span>
-
-      Industrial
+    <a class="navbar-brand" href="{% url 'homepage' %}">
+     <img
+        src="{% static 'catalog/images/nfc_logo.jpeg' %}"
+        alt="Non Ferrous Castings Logo"
+        height="50"
+        class="img-fluid"
+      >
     </a>
+     
+     
+    
 
     <!-- MOBILE TOGGLER -->
-
     <button
       class="navbar-toggler"
       type="button"
@@ -20,38 +26,35 @@
     </button>
 
     <!-- NAVIGATION -->
-
     <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <!-- MENU LINKS -->
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/"> Home </a>
-          <form
-            class="d-flex ms-3"
-            method="GET"
-            action="{% url 'search_products' %}"
-          >
-            <input
-              class="form-control me-2"
-              type="search"
-              name="q"
-              placeholder="Search products..."
-            />
 
-            <button class="btn btn-nfc" type="submit">Search</button>
-          </form>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about_page' %}"> About </a>
+          <a class="nav-link" href="/">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact_page' %}"> Contact </a>
+          <a class="nav-link" href="{% url 'about_page' %}">
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact_page' %}">
+            Contact
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'product_list' %}">
+            Products
+          </a>
         </li>
 
         <!-- DYNAMIC CATEGORIES -->
-
         {% for category in categories %}
-
         <li class="nav-item">
           <a
             class="nav-link"
@@ -60,9 +63,27 @@
             {{ category.name }}
           </a>
         </li>
-
         {% endfor %}
+
       </ul>
+
+      <!-- SEARCH FORM -->
+      <form
+        class="d-flex ms-lg-3 mt-3 mt-lg-0"
+        method="GET"
+        action="{% url 'search_products' %}"
+      >
+        <input
+          class="form-control me-2"
+          type="search"
+          name="q"
+          placeholder="Search products..."
+        >
+        <button class="btn btn-nfc" type="submit">
+          Search
+        </button>
+      </form>
+
     </div>
   </div>
 </nav>

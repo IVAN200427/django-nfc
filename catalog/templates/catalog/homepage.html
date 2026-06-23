@@ -30,9 +30,9 @@ applications in Zimbabwe. {% block content %}
         </div>
 
         <div class="d-flex gap-3 flex-wrap" id="featured-products">
-          <a href="#featured-products" class="btn btn-nfc btn-lg">
-            Explore Products
-          </a>
+          <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">
+         Explore Products
+         </a>
 
           <a
             href="{% url 'contact_page' %}"

@@ -12,6 +12,18 @@ from .forms import (
 
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from .models import Product
+
+def product_list(request):
+    products = Product.objects.all()
+
+    return render(
+        request,
+        'catalog/product_list.html',
+        {
+            'products': products
+        }
+    )
 
 
 def robots_txt(request):

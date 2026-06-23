@@ -1,0 +1,49 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+All Products | NFC Industrial
+{% endblock %}
+
+{% block meta_description %}
+Browse NFC Industrial's complete catalog of brass fittings, valves, taps, mixers, sanitary fittings and engineering solutions.
+{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="section-title">
+            Our Product Catalog
+        </h1>
+
+        <p class="section-subtitle mx-auto">
+            Explore NFC Industrial's complete range of precision-engineered
+            brass fittings, valves, taps, mixers and industrial plumbing
+            solutions.
+        </p>
+    </div>
+
+    <div class="row g-4">
+
+        {% for product in products %}
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                {% include 'catalog/includes/product_card.html' with product=product %}
+            </div>
+
+        {% empty %}
+
+            <div class="col-12">
+                <div class="alert alert-warning text-center">
+                    No products available.
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

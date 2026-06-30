@@ -1,89 +1,141 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div class="container">
 
-    <!-- LOGO -->
-    <a class="navbar-brand" href="{% url 'homepage' %}">
-     <img
-        src="{% static 'catalog/images/nfc_logo.jpeg' %}"
-        alt="Non Ferrous Castings Logo"
-        height="50"
-        class="img-fluid"
-      >
-    </a>
-     
-     
-    
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
 
-    <!-- MOBILE TOGGLER -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNavbar"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'homepage' %}">
+            <img
+                src="{% static 'catalog/images/nfc_logo.jpeg' %}"
+                alt="NFC Industrial"
+                height="50"
+                class="me-2"
+            >
 
-    <!-- NAVIGATION -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
+        </a>
 
-      <!-- MENU LINKS -->
-      <ul class="navbar-nav ms-auto">
+        <!-- Mobile Button -->
 
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
 
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'about_page' %}">
-            About
-          </a>
-        </li>
+            <span class="navbar-toggler-icon"></span>
 
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact_page' %}">
-            Contact
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'product_list' %}">
-            Products
-          </a>
-        </li>
-
-        <!-- DYNAMIC CATEGORIES -->
-        {% for category in categories %}
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="{% url 'category_products' category.slug %}"
-          >
-            {{ category.name }}
-          </a>
-        </li>
-        {% endfor %}
-
-      </ul>
-
-      <!-- SEARCH FORM -->
-      <form
-        class="d-flex ms-lg-3 mt-3 mt-lg-0"
-        method="GET"
-        action="{% url 'search_products' %}"
-      >
-        <input
-          class="form-control me-2"
-          type="search"
-          name="q"
-          placeholder="Search products..."
-        >
-        <button class="btn btn-nfc" type="submit">
-          Search
         </button>
-      </form>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'homepage' %}">
+                        Home
+                    </a>
+                </li>
+
+                <!-- Products Dropdown -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="productsDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Products
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="{% url 'product_list' %}">
+
+                                All Products
+
+                            </a>
+
+                        </li>
+
+                        <li><hr class="dropdown-divider"></li>
+
+                        {% for category in categories %}
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="{% url 'category_products' category.slug %}">
+
+                                {{ category.name }}
+
+                            </a>
+
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'about_page' %}">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'contact_page' %}">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!-- Search -->
+
+            <form
+                class="d-flex"
+                method="GET"
+                action="{% url 'search_products' %}">
+
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    name="q"
+                    placeholder="Search products...">
+
+                <button
+                    class="btn btn-primary"
+                    type="submit">
+
+                    Search
+
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
-  </div>
+
 </nav>

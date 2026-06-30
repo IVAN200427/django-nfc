@@ -5,45 +5,53 @@ valves, mixers, stopcocks, and sanitary products for industrial and commercial
 applications in Zimbabwe. {% block content %}
 
 <!-- ================= HERO SECTION ================= -->
-
-<section class="hero-section py-5">
+<section class="hero-section">
     <div class="container">
+        <div class="row align-items-center g-5 min-vh-75">
 
-        <div class="row align-items-center g-5">
-
-            <!-- LEFT SIDE -->
+            <!-- LEFT COLUMN -->
 
             <div class="col-lg-6">
 
-                <span class="badge bg-primary px-3 py-2 mb-3 fs-6">
+                <span class="hero-badge">
                     Trusted Zimbabwean Manufacturer
                 </span>
 
-                <h1 class="display-4 fw-bold mb-4">
-                    Premium Brass Engineering Solutions Built to Last
+                <h1 class="hero-title mt-3">
+                    Premium Brass Engineering Solutions
+                    Built to Last
                 </h1>
 
-                <p class="lead text-muted mb-4">
+                <p class="hero-text mt-4">
 
                     Non-Ferrous Casting (Pvt) Ltd manufactures premium-quality
                     brass plumbing fittings, industrial valves, taps,
-                    mixers and engineering castings designed for
-                    commercial, municipal and infrastructure projects
-                    throughout Zimbabwe.
+                    mixers and engineering castings designed for commercial,
+                    municipal and infrastructure projects throughout Zimbabwe.
 
                 </p>
 
-                <div class="d-flex flex-wrap gap-3">
+                <div class="hero-checklist">
+
+                    <div>✔ Industrial Grade Brass</div>
+
+                    <div>✔ Precision Engineering</div>
+
+                    <div>✔ Nationwide Supply</div>
+
+                </div>
+
+                <div class="mt-5 d-flex flex-wrap gap-3">
 
                     <a href="{% url 'product_list' %}"
-                       class="btn btn-primary btn-lg px-4">
+                       class="btn btn-primary btn-lg">
 
                         Explore Products
 
                     </a>
 
                     <a href="{% url 'contact_page' %}"
-                       class="btn btn-outline-primary btn-lg px-4">
+                       class="btn btn-outline-primary btn-lg">
 
                         Request Consultation
 
@@ -53,20 +61,160 @@ applications in Zimbabwe. {% block content %}
 
             </div>
 
-            <!-- RIGHT SIDE -->
+            <!-- RIGHT COLUMN -->
 
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6">
 
-                <img
-                    src="{% static 'catalog/images/home1.jpeg' %}"
-                    class="img-fluid rounded-4 shadow-lg hero-image"
-                    alt="NFC Industrial Manufacturing"
-                >
+                <div class="hero-image-card">
+
+                    <img
+                        src="{% static 'catalog/images/home1.jpeg' %}"
+                        class="img-fluid hero-image"
+                        alt="Premium Brass Product">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ==========================================
+WHY CHOOSE NFC
+========================================== -->
+
+<section class="py-5 bg-white">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="text-primary fw-bold">
+                WHY CHOOSE NFC
+            </span>
+
+            <h2 class="display-5 fw-bold mt-2">
+                Engineering Excellence You Can Trust
+            </h2>
+
+            <p class="text-muted mx-auto" style="max-width:700px;">
+
+                We manufacture premium brass fittings and engineering
+                components designed for durability, precision and
+                consistent industrial performance.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <div class="feature-icon">
+                        🏭
+                    </div>
+
+                    <h4>
+                        Industrial Manufacturing
+                    </h4>
+
+                    <p>
+
+                        Modern casting techniques producing
+                        reliable industrial-grade brass products.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <div class="feature-icon">
+                        ⚙️
+                    </div>
+
+                    <h4>
+
+                        Precision Engineering
+
+                    </h4>
+
+                    <p>
+
+                        Manufactured with strict dimensional
+                        accuracy and quality control.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <div class="feature-icon">
+
+                        ✅
+
+                    </div>
+
+                    <h4>
+
+                        Quality Assurance
+
+                    </h4>
+
+                    <p>
+
+                        Every product undergoes careful
+                        inspection before delivery.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <div class="feature-icon">
+
+                        🚚
+
+                    </div>
+
+                    <h4>
+
+                        Reliable Supply
+
+                    </h4>
+
+                    <p>
+
+                        Supplying commercial,
+                        municipal and industrial projects
+                        throughout Zimbabwe.
+
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
+
 </section>
 {% endblock %}

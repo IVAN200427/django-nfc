@@ -1,42 +1,41 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
 
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="{% url 'homepage' %}">
-            <img
-                src="{% static 'catalog/images/nfc_logo.jpeg' %}"
-                alt="NFC Industrial"
-                height="50"
-                class="me-2"
-            >
-
+        <a class="navbar-brand" href="{% url 'homepage' %}">
+            <img src="{% static 'catalog/images/nfc_logo.jpeg' %}"
+                 alt="NFC Industrial"
+                 height="50"
+                 class="img-fluid">
         </a>
 
-        <!-- Mobile Button -->
-
+        <!-- Mobile Toggle -->
         <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar">
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
             <span class="navbar-toggler-icon"></span>
 
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNavbar">
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNavbar">
 
-            <ul class="navbar-nav mx-auto">
+            <!-- Links -->
+            <ul class="navbar-nav mx-auto align-items-lg-center">
 
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'homepage' %}">
                         Home
                     </a>
                 </li>
-
-                <!-- Products Dropdown -->
 
                 <li class="nav-item dropdown">
 
@@ -45,24 +44,20 @@
                         href="#"
                         id="productsDropdown"
                         role="button"
-                        data-bs-toggle="dropdown">
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
 
                         Products
 
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu shadow-sm border-0">
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="{% url 'product_list' %}">
-
+                            <a class="dropdown-item"
+                               href="{% url 'product_list' %}">
                                 All Products
-
                             </a>
-
                         </li>
 
                         <li><hr class="dropdown-divider"></li>
@@ -70,15 +65,10 @@
                         {% for category in categories %}
 
                         <li>
-
-                            <a
-                                class="dropdown-item"
-                                href="{% url 'category_products' category.slug %}">
-
+                            <a class="dropdown-item"
+                               href="{% url 'category_products' category.slug %}">
                                 {{ category.name }}
-
                             </a>
-
                         </li>
 
                         {% endfor %}
@@ -88,44 +78,33 @@
                 </li>
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{% url 'about_page' %}">
-
+                    <a class="nav-link" href="{% url 'about_page' %}">
                         About
-
                     </a>
-
                 </li>
 
                 <li class="nav-item">
-
-                    <a class="nav-link"
-                       href="{% url 'contact_page' %}">
-
+                    <a class="nav-link" href="{% url 'contact_page' %}">
                         Contact
-
                     </a>
-
                 </li>
 
             </ul>
 
             <!-- Search -->
-
             <form
-                class="d-flex"
+                class="d-flex flex-column flex-lg-row gap-2 mt-4 mt-lg-0 ms-lg-4"
                 method="GET"
                 action="{% url 'search_products' %}">
 
                 <input
-                    class="form-control me-2"
+                    class="form-control"
                     type="search"
                     name="q"
                     placeholder="Search products...">
 
                 <button
-                    class="btn btn-primary"
+                    class="btn btn-nfc"
                     type="submit">
 
                     Search
@@ -137,5 +116,4 @@
         </div>
 
     </div>
-
 </nav>

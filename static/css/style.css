@@ -1,144 +1,10 @@
 /* =========================================
    GLOBAL STYLES
 ========================================= */
-
-body {
-  background-color: #f8fafc;
-  font-family: "Segoe UI", sans-serif;
-  color: #1e293b;
-}
-
-a {
-  text-decoration: none;
-}
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  color: #64748b;
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
-body {
-  background-color: #f4f7fb;
-  font-family: "Segoe UI", sans-serif;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.hero-section {
-  background:
-    linear-gradient(rgba(13, 79, 155, 0.85), rgba(13, 79, 155, 0.85)),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd");
-
-  background-size: cover;
-  background-position: center;
-}
-
-.section-title {
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.section-title::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #0d4f9b;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.product-card {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.product-image {
-  height: 240px;
-  object-fit: cover;
-}
-
-footer {
-  background-color: #1f2937;
-  color: white;
-  padding: 60px 0;
-}
 :root {
   --nfc-blue: #0d4f9b;
   --nfc-dark: #1f2937;
   --nfc-light: #f8fafc;
-}
-
-body {
-  background-color: var(--nfc-light);
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  background-color: white;
-  border-bottom: 3px solid var(--nfc-blue);
-}
-
-.navbar-brand {
-  font-weight: bold;
-  color: var(--nfc-blue);
-  font-size: 1.5rem;
-}
-
-.hero-section {
-  background: linear-gradient(rgba(13, 79, 155, 0.85), rgba(13, 79, 155, 0.85));
-  color: white;
-  padding: 100px 0;
-}
-
-.section-title {
-  color: var(--nfc-blue);
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.product-card {
-  border: none;
-  transition: 0.3s ease;
-  height: 100%;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  height: 250px;
-  object-fit: cover;
-}
-
-.btn-nfc {
-  background-color: var(--nfc-blue);
-  color: white;
-  border: none;
-}
-
-.btn-nfc:hover {
-  background-color: #083b73;
-  color: white;
-}
-
-footer {
-  background-color: var(--nfc-dark);
-  color: white;
-  padding: 40px 0;
-  margin-top: 60px;
 }
 
 /* =========================================
@@ -146,10 +12,10 @@ footer {
 ========================================= */
 
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    min-height: 72px;
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand {
@@ -157,7 +23,13 @@ footer {
   font-weight: 800;
   color: #0d6efd !important;
 }
-
+.navbar-brand img {
+    height: 50px !important;
+    width: auto !important;
+    max-height: 50px;
+    display: block;
+    transition: 0.3s;
+}
 .nav-link {
   color: #334155 !important;
   font-weight: 500;
@@ -165,142 +37,90 @@ footer {
   transition: 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #0d6efd !important;
-}
-/* =========================================
+
+
+/* ==========================
    HERO SECTION
-========================================= */
+========================== */
 
 .hero-section{
-
-    background:#f5f8fc;
-
     padding:90px 0;
-}
-
-.min-vh-75{
-
-    min-height:75vh;
+    background:#eef4fb;
 }
 
 .hero-badge{
-
     display:inline-block;
-
-    background:#0d6efd;
-
-    color:white;
-
-    padding:8px 20px;
-
-    border-radius:30px;
-
+    background:#dce9ff;
+    color:#0d4f9b;
+    padding:10px 22px;
+    border-radius:40px;
     font-weight:600;
-
-    font-size:.95rem;
 }
 
 .hero-title{
-
-    font-size:3.8rem;
-
+    font-size:clamp(2.3rem,6vw,4rem);
     font-weight:800;
-
-    line-height:1.1;
-
-    color:#1a252f;
+    line-height:1.08;
+    color:#172033;
 }
-
 .hero-text{
+    font-size:1.25rem;
+    line-height:1.8;
+    color:#556273;
+}
 
+.hero-checklist li{
     font-size:1.15rem;
-
-    color:#55606d;
-
-    line-height:1.9;
-
-    max-width:550px;
-}
-
-.hero-checklist{
-
-    margin-top:30px;
-}
-
-.hero-checklist div{
-
-    margin-bottom:14px;
-
     font-weight:600;
-
-    color:#34495e;
-
-    font-size:1.05rem;
+    margin-bottom:12px;
+    color:#24446d;
 }
+
+/* =========================================
+   HERO IMAGE CARD
+========================================= */
 
 .hero-image-card{
 
-    background:white;
+    background:#ffffff;
 
-    border-radius:20px;
+    border-radius:24px;
 
     padding:18px;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
+    box-shadow:0 30px 60px rgba(0,0,0,.08);
 
-    transition:.4s;
+    overflow:hidden;
+
+    max-width:620px;
+
 }
 
-.hero-image-card:hover{
-
-    transform:translateY(-6px);
-}
-
-.hero-image{
-
-    border-radius:15px;
+.hero-product-image{
 
     width:100%;
-}
 
-@media(max-width:991px){
+    display:block;
 
-.hero-section{
+    border-radius:16px;
 
-text-align:center;
+    object-fit:cover;
 
-}
+    min-height:340px;
 
-.hero-text{
+    max-height:560px;
 
-margin:auto;
-
-}
-
-.hero-checklist{
-
-display:inline-block;
-
-text-align:left;
-
-margin-top:30px;
+    transition:transform .4s ease;
 
 }
 
-.hero-image-card{
+.hero-image-card:hover .hero-product-image{
 
-margin-top:40px;
-
-}
-
-.hero-title{
-
-font-size:2.8rem;
+    transform:scale(1.02);
 
 }
 
-}
+
 /* =========================================
    BUTTONS
 ========================================= */
@@ -358,17 +178,43 @@ font-size:2.8rem;
    MOBILE RESPONSIVE
 ========================================= */
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
+@media (max-width: 991px) {
 
   .hero-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
     text-align: center;
   }
 
-  .hero-image {
-    margin-top: 3rem;
+  .hero-title {
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    margin-top: 20px;
+  }
+
+  .hero-text {
+    font-size: 1.08rem;
+  }
+
+  .hero-checklist {
+    display: inline-block;
+    text-align: left;
+    margin: auto;
+  }
+
+  .hero-image-card {
+    margin-bottom: 40px;
+  }
+
+  .hero-product-image {
+    max-height: 420px;
+  }
+
+  .d-flex.flex-wrap.gap-3 {
+    justify-content: center;
+  }
+
+  .btn-lg {
+    width: 100%;
   }
 }
 
@@ -475,17 +321,8 @@ font-size:2.8rem;
    PROFESSIONAL NAVBAR
 ========================================== */
 
-.navbar {
 
-    height: 72px;
-    background: white;
-    border-bottom: 1px solid #e9ecef;
-}
 
-.navbar-brand img{
-
-    transition:.3s;
-}
 
 .navbar-brand img:hover{
 
@@ -531,4 +368,94 @@ font-size:2.8rem;
 .navbar .btn{
 
     border-radius:8px;
+}
+
+/* ==========================
+   MOBILE NAVBAR
+========================== */
+
+@media (max-width:991px){
+
+.navbar-collapse{
+
+    text-align:center;
+
+    padding-top:20px;
+
+}
+
+.navbar-nav{
+
+    margin-bottom:20px;
+
+}
+
+.navbar-nav .nav-item{
+
+    margin-bottom:8px;
+
+}
+
+.navbar form{
+
+    width:100%;
+
+}
+
+.navbar form input{
+
+    width:100%;
+
+}
+
+.navbar form button{
+
+    width:100%;
+
+}
+
+}
+/* ==========================================
+   MOBILE NAVBAR
+========================================== */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-collapse {
+        background: #ffffff;
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .navbar-nav {
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 8px 0;
+    }
+
+    .nav-link {
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .navbar form {
+        width: 100%;
+    }
+
+    .navbar form input {
+        width: 100%;
+    }
+
+    .navbar form .btn {
+        width: 100%;
+    }
 }

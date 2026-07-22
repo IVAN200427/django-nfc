@@ -1,81 +1,289 @@
-{% extends 'catalog/base.html' %} {% load static %} {% block title %} NFC
-Industrial | Premium Brass Fittings & Industrial Valves {% endblock %} {% block
-meta_description %} NFC Industrial manufactures premium brass fittings, gate
-valves, mixers, stopcocks, and sanitary products for industrial and commercial
-applications in Zimbabwe. {% block content %}
+{% extends 'catalog/base.html' %}
+{% load static %}
 
-<section class="hero-section">
+{% block title %}NFC Industrial | Premium Brass Fittings & Industrial Valves{% endblock %}
 
-    <div class="container">
+{% block meta_description %}NFC Industrial manufactures premium brass fittings, gate valves, mixers, stopcocks, and sanitary products for industrial and commercial applications in Zimbabwe.{% endblock %}
 
-        <div class="row align-items-center gy-5">
+{% block content %}
+
+<!-- ==========================================
+     HERO SECTION — Enhanced
+========================================== -->
+<section class="hero-section" id="heroSection">
+
+    <!-- Animated background particles -->
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <!-- Floating decorative shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <div class="container position-relative" style="z-index: 2;">
+
+        <div class="row align-items-center gy-5 hero-row">
 
             <!-- LEFT -->
-
             <div class="col-12 col-lg-6 order-2 order-lg-1">
 
-                <span class="hero-badge">
+                <span class="hero-badge reveal-left">
+                    <span class="badge-pulse"></span>
                     Trusted Zimbabwean Manufacturer
                 </span>
 
-                <h1 class="hero-title mt-4">
-                    Premium Brass Engineering Solutions Built to Last
+                <h1 class="hero-title mt-4" aria-label="Premium Brass Engineering Solutions Built to Last">
+                    <span class="line-1 reveal-left delay-1">Premium Brass</span>
+                    <span class="line-2 reveal-left delay-2">Engineering Solutions</span>
+                    <span class="line-3 reveal-left delay-3">Built to Last</span>
                 </h1>
 
-                <p class="hero-text mt-4">
+                <!-- Typewriter sub-text -->
+                <div class="hero-typewriter-wrapper mt-3">
+                    <p class="hero-typewriter-text">
+                        <span id="typewriterText"></span><span class="typewriter-cursor">|</span>
+                    </p>
+                </div>
 
-                    Non-Ferrous Casting (Pvt) Ltd manufactures premium-quality brass
-                    plumbing fittings, industrial valves, taps, mixers and engineering
-                    castings designed for commercial, municipal and infrastructure
-                    projects throughout Zimbabwe.
-
+                <p class="hero-text mt-3 reveal-left delay-4">
+                    Non-Ferrous Casting (Pvt) Ltd manufactures premium brass plumbing
+                    fittings, industrial valves, taps and precision-engineered castings
+                    trusted for commercial, municipal and infrastructure projects
+                    throughout Zimbabwe.
                 </p>
 
-                <ul class="hero-checklist list-unstyled mt-4">
-
-                    <li>✔ Industrial Grade Brass</li>
-
-                    <li>✔ Precision Engineering</li>
-
-                    <li>✔ Nationwide Supply</li>
-
+                <ul class="hero-checklist list-unstyled mt-4 reveal-left delay-5">
+                    <li><span class="check-icon">✔</span> Industrial Grade Brass</li>
+                    <li><span class="check-icon">✔</span> Precision Engineering</li>
+                    <li><span class="check-icon">✔</span> Nationwide Supply</li>
                 </ul>
 
-                <div class="d-flex flex-wrap gap-3 mt-5">
-
-                    <a href="{% url 'product_list' %}"
-                       class="btn btn-nfc btn-lg">
-
-                        Explore Products
-
+                <div class="d-flex flex-wrap gap-3 mt-5 reveal-left delay-6">
+                    <a href="{% url 'product_list' %}" class="btn btn-nfc btn-lg btn-ripple">
+                        <span>Explore Products</span>
+                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
-
-                    <a href="{% url 'contact_page' %}"
-                       class="btn btn-outline-primary btn-lg">
-
+                    <a href="{% url 'contact_page' %}" class="btn btn-outline-primary btn-lg btn-glow">
                         Request Consultation
-
                     </a>
+                </div>
 
+                <div class="hero-mini-grid mt-4 reveal-left delay-7">
+                    <div class="mini-card">
+                        <strong>Local</strong>
+                        <span>Norton manufacturing</span>
+                    </div>
+                    <div class="mini-card">
+                        <strong>Brass</strong>
+                        <span>Durable components</span>
+                    </div>
+                    <div class="mini-card">
+                        <strong>B2B</strong>
+                        <span>Quote-based supply</span>
+                    </div>
                 </div>
 
             </div>
 
             <!-- IMAGE -->
-
             <div class="col-12 col-lg-6 order-1 order-lg-2">
 
-               <div class="hero-image-card mx-auto">
+                <div class="hero-image-card mx-auto reveal-right">
+                    <div class="image-wrapper">
+                        <img src="{% static 'catalog/images/homepic.jpeg' %}" class="hero-product-image" alt="Industrial Brass Product">
+                        <div class="image-shimmer"></div>
+                    </div>
 
-                 <img
-                  src="{% static 'catalog/images/home1.jpeg' %}"
-                  class="hero-product-image"
-                 alt="Industrial Brass Product">
+                    <div class="hero-image-label">
+                        <span>Precision cast brass</span>
+                        <strong>Manufactured for long service life</strong>
+                    </div>
 
-          </div>
+                    <!-- Floating badge on image -->
+                    <div class="floating-badge badge-quality">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span>ISO Quality</span>
+                    </div>
+                    <div class="floating-badge badge-years">
+                        <span>8+</span>
+                        <span>Years</span>
+                    </div>
+                </div>
 
-</div>
+            </div>
 
+        </div>
+
+    </div>
+
+    <!-- Animated scroll indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <span>Scroll</span>
+        <div class="scroll-line">
+            <div class="scroll-dot"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ==========================================
+     STATS COUNTER SECTION — NEW
+========================================== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item" data-count="8">
+                <div class="stat-number"><span class="counter">0</span>+</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-item" data-count="5000">
+                <div class="stat-number"><span class="counter">0</span>+</div>
+                <div class="stat-label">Products Manufactured</div>
+            </div>
+            <div class="stat-item" data-count="100">
+                <div class="stat-number"><span class="counter">0</span>%</div>
+                <div class="stat-label">Quality Guarantee</div>
+            </div>
+            <div class="stat-item" data-count="500">
+                <div class="stat-number"><span class="counter">0</span>+</div>
+                <div class="stat-label">Clients Served</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     WHY CHOOSE NFC — Enhanced
+========================================== -->
+<section class="py-5 bg-white" id="featuresSection">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-tag">WHY CHOOSE NFC</span>
+            <h2 class="display-5 fw-bold mt-2">
+                Engineering Excellence <span class="gradient-text">You Can Trust</span>
+            </h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;">
+                We manufacture premium brass fittings and engineering
+                components designed for durability, precision and
+                consistent industrial performance.
+            </p>
+            <!-- Decorative line -->
+            <div class="section-divider">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Industrial Manufacturing -->
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100 reveal-card" data-delay="0">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18"/>
+                                <path d="M5 21V7l8-4v18"/>
+                                <path d="M19 21V11l-6-4"/>
+                                <path d="M9 9h.01"/>
+                                <path d="M9 13h.01"/>
+                                <path d="M9 17h.01"/>
+                                <path d="M15 13h.01"/>
+                                <path d="M15 17h.01"/>
+                            </svg>
+                        </div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h4>Industrial Manufacturing</h4>
+                    <p>Modern brass casting techniques producing durable, high-performance industrial components.</p>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Precision Engineering -->
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100 reveal-card" data-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2v3"/>
+                                <path d="M12 19v3"/>
+                                <path d="M2 12h3"/>
+                                <path d="M19 12h3"/>
+                                <path d="M5.6 5.6l2.1 2.1"/>
+                                <path d="M16.3 16.3l2.1 2.1"/>
+                                <path d="M5.6 18.4l2.1-2.1"/>
+                                <path d="M16.3 7.7l2.1-2.1"/>
+                            </svg>
+                        </div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h4>Precision Engineering</h4>
+                    <p>Manufactured with strict dimensional accuracy and rigorous engineering standards.</p>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Quality Assurance -->
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100 reveal-card" data-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h4>Quality Assurance</h4>
+                    <p>Every component undergoes rigorous inspection to ensure consistent quality and reliability.</p>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Reliable Supply -->
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card h-100 reveal-card" data-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <path d="M16 8h4l3 3v5h-7z"/>
+                                <circle cx="5.5" cy="18.5" r="2"/>
+                                <circle cx="18.5" cy="18.5" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="icon-ring"></div>
+                    </div>
+                    <h4>Reliable Supply</h4>
+                    <p>Supporting commercial, municipal and industrial projects with dependable nationwide delivery.</p>
+                    <div class="card-hover-line"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trust bar -->
+        <div class="trust-bar mt-5 pt-4">
+            <div class="trust-item">
+                <span class="trust-icon">🏗️</span>
+                <span>Infrastructure</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🏭</span>
+                <span>Industrial</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🏢</span>
+                <span>Commercial</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🚰</span>
+                <span>Municipal</span>
+            </div>
         </div>
 
     </div>
@@ -83,191 +291,1235 @@ applications in Zimbabwe. {% block content %}
 </section>
 
 <!-- ==========================================
-     WHY CHOOSE NFC
+     BRANDS / TRUSTED BY SECTION — NEW
 ========================================== -->
-
-<section class="py-5 bg-white">
-
+<section class="brands-section">
     <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="text-primary fw-bold">
-                WHY CHOOSE NFC
-            </span>
-
-            <h2 class="display-5 fw-bold mt-2">
-                Engineering Excellence You Can Trust
-            </h2>
-
-            <p class="text-muted mx-auto" style="max-width: 700px;">
-                We manufacture premium brass fittings and engineering
-                components designed for durability, precision and
-                consistent industrial performance.
-            </p>
-
+        <div class="brands-inner">
+            <span class="brands-label">Trusted by industry leaders</span>
+            <div class="brands-logos">
+                <span class="brand-placeholder">🏛️ Municipal</span>
+                <span class="brand-placeholder">⚙️ Industrial</span>
+                <span class="brand-placeholder">🔧 Engineering</span>
+                <span class="brand-placeholder">💧 Plumbing</span>
+                <span class="brand-placeholder">🏗️ Construction</span>
+            </div>
+            <div class="brands-marquee">
+                <span>Quality Brass Components — Engineered in Zimbabwe — Delivered Worldwide</span>
+            </div>
         </div>
-
-        <div class="row g-4">
-
-            <!-- Industrial Manufacturing -->
-            <div class="col-md-6 col-lg-3">
-
-                <div class="feature-card h-100">
-
-                    <div class="feature-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="30"
-                             height="30"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             stroke-linecap="round"
-                             stroke-linejoin="round">
-
-                            <path d="M3 21h18"/>
-                            <path d="M5 21V7l8-4v18"/>
-                            <path d="M19 21V11l-6-4"/>
-                            <path d="M9 9h.01"/>
-                            <path d="M9 13h.01"/>
-                            <path d="M9 17h.01"/>
-                            <path d="M15 13h.01"/>
-                            <path d="M15 17h.01"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Industrial Manufacturing</h4>
-
-                    <p>
-                        Modern brass casting techniques producing durable,
-                        high-performance industrial components.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Precision Engineering -->
-            <div class="col-md-6 col-lg-3">
-
-                <div class="feature-card h-100">
-
-                    <div class="feature-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="30"
-                             height="30"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             stroke-linecap="round"
-                             stroke-linejoin="round">
-
-                            <circle cx="12" cy="12" r="3"/>
-                            <path d="M12 2v3"/>
-                            <path d="M12 19v3"/>
-                            <path d="M2 12h3"/>
-                            <path d="M19 12h3"/>
-                            <path d="M5.6 5.6l2.1 2.1"/>
-                            <path d="M16.3 16.3l2.1 2.1"/>
-                            <path d="M5.6 18.4l2.1-2.1"/>
-                            <path d="M16.3 7.7l2.1-2.1"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Precision Engineering</h4>
-
-                    <p>
-                        Manufactured with strict dimensional accuracy
-                        and rigorous engineering standards.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Quality Assurance -->
-            <div class="col-md-6 col-lg-3">
-
-                <div class="feature-card h-100">
-
-                    <div class="feature-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="30"
-                             height="30"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             stroke-linecap="round"
-                             stroke-linejoin="round">
-
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Quality Assurance</h4>
-
-                    <p>
-                        Every component undergoes rigorous inspection
-                        to ensure consistent quality and reliability.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Reliable Supply -->
-            <div class="col-md-6 col-lg-3">
-
-                <div class="feature-card h-100">
-
-                    <div class="feature-icon">
-
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             width="30"
-                             height="30"
-                             viewBox="0 0 24 24"
-                             fill="none"
-                             stroke="currentColor"
-                             stroke-width="2"
-                             stroke-linecap="round"
-                             stroke-linejoin="round">
-
-                            <rect x="1" y="3" width="15" height="13"/>
-                            <path d="M16 8h4l3 3v5h-7z"/>
-                            <circle cx="5.5" cy="18.5" r="2"/>
-                            <circle cx="18.5" cy="18.5" r="2"/>
-
-                        </svg>
-
-                    </div>
-
-                    <h4>Reliable Supply</h4>
-
-                    <p>
-                        Supporting commercial, municipal and industrial
-                        projects with dependable nationwide delivery.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
+
+<!-- ==========================================
+     CTA BANNER — NEW
+========================================== -->
+<section class="cta-banner">
+    <div class="container">
+        <div class="cta-banner-inner">
+            <div class="cta-content">
+                <span class="cta-tag">Get a Quote</span>
+                <h3>Need custom brass <span>engineering solutions?</span></h3>
+                <p>Contact our team for competitive pricing and expert guidance on your next project.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="{% url 'contact_page' %}" class="btn btn-nfc btn-lg btn-ripple">
+                    <span>Contact Us Today</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="tel:+263771234567" class="btn btn-outline-light btn-lg">
+                    📞 Call Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     STYLES — Enhanced
+========================================== -->
+<style>
+    /* ===== CSS Variables ===== */
+    :root {
+        --nfc-primary: #0a2463;
+        --nfc-secondary: #1e3a8a;
+        --nfc-accent: #f59e0b;
+        --nfc-gold: #d4a843;
+        --nfc-light: #f8f9fc;
+        --nfc-dark: #0b1a3a;
+        --shadow-soft: 0 10px 40px rgba(10, 36, 99, 0.10);
+        --shadow-hover: 0 20px 60px rgba(10, 36, 99, 0.18);
+        --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ===== REVEAL ANIMATIONS ===== */
+    .reveal-left {
+        opacity: 0;
+        transform: translateX(-40px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .reveal-right {
+        opacity: 0;
+        transform: translateX(40px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .reveal-card {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .delay-1 {
+        transition-delay: 0.1s;
+    }
+    .delay-2 {
+        transition-delay: 0.2s;
+    }
+    .delay-3 {
+        transition-delay: 0.3s;
+    }
+    .delay-4 {
+        transition-delay: 0.4s;
+    }
+    .delay-5 {
+        transition-delay: 0.5s;
+    }
+    .delay-6 {
+        transition-delay: 0.6s;
+    }
+    .delay-7 {
+        transition-delay: 0.7s;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+        position: relative;
+        padding: 80px 0 60px;
+        background: linear-gradient(165deg, #f8f9fc 0%, #ffffff 40%, #eef2f7 100%);
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Particles */
+    .hero-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .hero-particles span {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: var(--nfc-primary);
+        border-radius: 50%;
+        opacity: 0.08;
+        animation: floatParticle 18s infinite linear;
+    }
+
+    @keyframes floatParticle {
+        0% {
+            transform: translateY(0) rotate(0deg) scale(1);
+            opacity: 0.08;
+        }
+        50% {
+            opacity: 0.18;
+        }
+        100% {
+            transform: translateY(-120vh) rotate(720deg) scale(0.5);
+            opacity: 0;
+        }
+    }
+
+    /* Floating shapes */
+    .floating-shape {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.06;
+        background: var(--nfc-primary);
+    }
+    .shape-1 {
+        width: 300px;
+        height: 300px;
+        top: -80px;
+        right: -60px;
+        animation: floatShape 20s ease-in-out infinite;
+    }
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        bottom: 20px;
+        left: -40px;
+        animation: floatShape 25s ease-in-out infinite reverse;
+    }
+    .shape-3 {
+        width: 120px;
+        height: 120px;
+        top: 40%;
+        left: 50%;
+        animation: floatShape 18s ease-in-out infinite 2s;
+    }
+    @keyframes floatShape {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+        33% {
+            transform: translate(30px, -40px) scale(1.1);
+        }
+        66% {
+            transform: translate(-20px, 30px) scale(0.9);
+        }
+    }
+
+    /* Hero Badge */
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(10, 36, 99, 0.08);
+        color: var(--nfc-primary);
+        padding: 8px 20px 8px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border: 1px solid rgba(10, 36, 99, 0.10);
+        backdrop-filter: blur(4px);
+    }
+    .badge-pulse {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #22c55e;
+        border-radius: 50%;
+        animation: pulseDot 2s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.6);
+            opacity: 0.5;
+        }
+    }
+
+    /* Hero Title */
+    .hero-title {
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--nfc-dark);
+    }
+    .hero-title span {
+        display: block;
+    }
+    .hero-title span:nth-child(2) {
+        color: var(--nfc-primary);
+    }
+    .hero-title span:nth-child(3) {
+        background: linear-gradient(135deg, var(--nfc-primary), var(--nfc-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Typewriter */
+    .hero-typewriter-wrapper {
+        min-height: 36px;
+    }
+    .hero-typewriter-text {
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: var(--nfc-secondary);
+        margin: 0;
+    }
+    .typewriter-cursor {
+        display: inline-block;
+        animation: blink 0.8s step-end infinite;
+        color: var(--nfc-gold);
+        font-weight: 300;
+    }
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    /* Hero Text */
+    .hero-text {
+        font-size: 1.1rem;
+        color: #4b5563;
+        max-width: 540px;
+        line-height: 1.7;
+    }
+
+    /* Checklist */
+    .hero-checklist li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: var(--nfc-dark);
+        padding: 4px 0;
+        font-size: 1.05rem;
+    }
+    .hero-checklist .check-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background: var(--nfc-primary);
+        color: #fff;
+        border-radius: 50%;
+        font-size: 0.7rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn-nfc {
+        background: var(--nfc-primary);
+        color: #fff;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(10, 36, 99, 0.30);
+    }
+    .btn-nfc:hover {
+        background: var(--nfc-secondary);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(10, 36, 99, 0.40);
+        color: #fff;
+    }
+    .btn-nfc .btn-arrow {
+        transition: transform 0.3s ease;
+    }
+    .btn-nfc:hover .btn-arrow {
+        transform: translateX(4px);
+    }
+
+    .btn-ripple {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-ripple .ripple-effect {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.35);
+        transform: scale(0);
+        animation: rippleAnim 0.7s ease-out forwards;
+        pointer-events: none;
+    }
+    @keyframes rippleAnim {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+
+    .btn-outline-primary {
+        border: 2px solid var(--nfc-primary);
+        color: var(--nfc-primary);
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        background: transparent;
+    }
+    .btn-outline-primary:hover {
+        background: var(--nfc-primary);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(10, 36, 99, 0.20);
+    }
+    .btn-glow {
+        animation: glowPulse 3s ease-in-out infinite;
+    }
+    @keyframes glowPulse {
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(10, 36, 99, 0.15);
+        }
+        50% {
+            box-shadow: 0 0 0 12px rgba(10, 36, 99, 0.0);
+        }
+    }
+
+    /* Hero Mini Grid */
+    .hero-mini-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .hero-mini-grid .mini-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(8px);
+        padding: 8px 18px 8px 16px;
+        border-radius: 30px;
+        border: 1px solid rgba(10, 36, 99, 0.06);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+    .hero-mini-grid .mini-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(10, 36, 99, 0.08);
+        border-color: rgba(10, 36, 99, 0.15);
+    }
+    .hero-mini-grid .mini-card strong {
+        color: var(--nfc-primary);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .hero-mini-grid .mini-card span {
+        color: #4b5563;
+        font-weight: 400;
+    }
+
+    /* Hero Image */
+    .hero-image-card {
+        position: relative;
+        max-width: 520px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+        transition: var(--transition);
+    }
+    .hero-image-card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-6px) scale(1.01);
+    }
+    .image-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+    }
+    .hero-product-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.8s ease;
+    }
+    .hero-image-card:hover .hero-product-image {
+        transform: scale(1.03);
+    }
+    .image-shimmer {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        animation: shimmer 4s ease-in-out infinite;
+        pointer-events: none;
+    }
+    @keyframes shimmer {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 200%;
+        }
+    }
+
+    .hero-image-label {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: rgba(10, 36, 99, 0.85);
+        backdrop-filter: blur(12px);
+        padding: 14px 20px;
+        border-radius: 16px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .hero-image-label span {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .hero-image-label strong {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 2px;
+    }
+
+    /* Floating badges on image */
+    .floating-badge {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+        padding: 8px 14px;
+        border-radius: 30px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: var(--nfc-dark);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        animation: floatBadge 4s ease-in-out infinite;
+    }
+    .badge-quality {
+        top: 20px;
+        right: 20px;
+        color: #16a34a;
+    }
+    .badge-quality svg {
+        stroke: #16a34a;
+    }
+    .badge-years {
+        bottom: 100px;
+        right: -10px;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.2;
+        padding: 10px 16px;
+        color: var(--nfc-primary);
+        animation-delay: 1s;
+    }
+    .badge-years span:first-child {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--nfc-gold);
+    }
+    .badge-years span:last-child {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.7;
+    }
+    @keyframes floatBadge {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        color: var(--nfc-primary);
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        opacity: 0.5;
+        animation: bounceScroll 2.5s ease-in-out infinite;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .scroll-line {
+        width: 1px;
+        height: 40px;
+        background: rgba(10, 36, 99, 0.20);
+        position: relative;
+    }
+    .scroll-dot {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background: var(--nfc-primary);
+        border-radius: 50%;
+        animation: scrollDot 2.5s ease-in-out infinite;
+    }
+    @keyframes scrollDot {
+        0%,
+        100% {
+            top: 0;
+            opacity: 1;
+        }
+        50% {
+            top: 34px;
+            opacity: 0.3;
+        }
+    }
+    @keyframes bounceScroll {
+        0%,
+        100% {
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            transform: translateX(-50%) translateY(6px);
+        }
+    }
+
+    /* ===== STATS SECTION ===== */
+    .stats-section {
+        background: linear-gradient(135deg, var(--nfc-primary), var(--nfc-secondary));
+        padding: 50px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .stats-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .stats-section::after {
+        content: '';
+        position: absolute;
+        bottom: -40%;
+        left: -10%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    .stat-item {
+        color: #fff;
+        padding: 10px;
+    }
+    .stat-number {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.1;
+        font-family: 'Inter', sans-serif;
+    }
+    .stat-number .counter {
+        display: inline-block;
+    }
+    .stat-label {
+        font-size: 0.9rem;
+        opacity: 0.75;
+        margin-top: 6px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+    }
+    @media (max-width: 768px) {
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+    @media (max-width: 480px) {
+        .stats-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .stat-number {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* ===== FEATURES SECTION ===== */
+    .section-tag {
+        display: inline-block;
+        background: rgba(10, 36, 99, 0.07);
+        color: var(--nfc-primary);
+        padding: 4px 18px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    .gradient-text {
+        background: linear-gradient(135deg, var(--nfc-primary), var(--nfc-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .section-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 16px;
+    }
+    .section-divider span {
+        display: inline-block;
+        height: 3px;
+        border-radius: 10px;
+        background: var(--nfc-primary);
+    }
+    .section-divider span:nth-child(1) {
+        width: 30px;
+        opacity: 0.3;
+    }
+    .section-divider span:nth-child(2) {
+        width: 50px;
+        background: var(--nfc-gold);
+    }
+    .section-divider span:nth-child(3) {
+        width: 30px;
+        opacity: 0.3;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 36px 28px 32px;
+        text-align: center;
+        transition: var(--transition);
+        border: 1px solid rgba(10, 36, 99, 0.05);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    }
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(10, 36, 99, 0.08);
+    }
+    .feature-card .card-hover-line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--nfc-primary), var(--nfc-gold));
+        border-radius: 10px;
+        transition: width 0.5s ease;
+    }
+    .feature-card:hover .card-hover-line {
+        width: 60%;
+    }
+
+    .feature-icon-wrapper {
+        position: relative;
+        display: inline-flex;
+        margin-bottom: 20px;
+    }
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(10, 36, 99, 0.06);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--nfc-primary);
+        transition: var(--transition);
+        position: relative;
+        z-index: 2;
+    }
+    .feature-card:hover .feature-icon {
+        background: var(--nfc-primary);
+        color: #fff;
+        transform: scale(1.05);
+    }
+    .icon-ring {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        border: 2px solid rgba(10, 36, 99, 0.08);
+        transition: var(--transition);
+        z-index: 1;
+    }
+    .feature-card:hover .icon-ring {
+        border-color: var(--nfc-gold);
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+
+    .feature-card h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--nfc-dark);
+        margin-bottom: 10px;
+    }
+    .feature-card p {
+        color: #6b7280;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        border-top: 1px solid rgba(10, 36, 99, 0.06);
+    }
+    .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        color: var(--nfc-dark);
+        font-size: 0.9rem;
+        opacity: 0.6;
+        transition: var(--transition);
+        cursor: default;
+    }
+    .trust-item:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+    .trust-icon {
+        font-size: 1.3rem;
+    }
+
+    /* ===== BRANDS SECTION ===== */
+    .brands-section {
+        background: var(--nfc-light);
+        padding: 40px 0;
+        border-top: 1px solid rgba(10, 36, 99, 0.04);
+        border-bottom: 1px solid rgba(10, 36, 99, 0.04);
+    }
+    .brands-inner {
+        text-align: center;
+    }
+    .brands-label {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #9ca3af;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    .brands-logos {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+    }
+    .brand-placeholder {
+        padding: 8px 22px;
+        background: #fff;
+        border-radius: 30px;
+        font-weight: 500;
+        color: var(--nfc-dark);
+        font-size: 0.85rem;
+        border: 1px solid rgba(10, 36, 99, 0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        transition: var(--transition);
+    }
+    .brand-placeholder:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        border-color: rgba(10, 36, 99, 0.12);
+    }
+    .brands-marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        color: #9ca3af;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        margin-top: 8px;
+    }
+    .brands-marquee span {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+        padding-left: 100%;
+    }
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+        padding: 60px 0;
+        background: var(--nfc-light);
+    }
+    .cta-banner-inner {
+        background: linear-gradient(135deg, var(--nfc-primary), var(--nfc-secondary));
+        border-radius: 28px;
+        padding: 50px 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(10, 36, 99, 0.20);
+    }
+    .cta-banner-inner::before {
+        content: '';
+        position: absolute;
+        top: -60%;
+        right: -10%;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .cta-banner-inner::after {
+        content: '';
+        position: absolute;
+        bottom: -40%;
+        left: -5%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        min-width: 240px;
+    }
+    .cta-tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3px 16px;
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+    .cta-content h3 {
+        color: #fff;
+        font-size: clamp(1.3rem, 2.5vw, 2rem);
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        line-height: 1.3;
+    }
+    .cta-content h3 span {
+        background: linear-gradient(135deg, #fcd34d, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .cta-content p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        margin: 0;
+        max-width: 480px;
+        line-height: 1.6;
+    }
+    .cta-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+    }
+    .cta-actions .btn-nfc {
+        background: #fff;
+        color: var(--nfc-primary);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+    }
+    .cta-actions .btn-nfc:hover {
+        background: #f8f9fc;
+        color: var(--nfc-primary);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    .cta-actions .btn-outline-light {
+        border: 2px solid rgba(255, 255, 255, 0.30);
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: var(--transition);
+        background: transparent;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .cta-actions .btn-outline-light:hover {
+        background: rgba(255, 255, 255, 0.10);
+        border-color: rgba(255, 255, 255, 0.50);
+        transform: translateY(-3px);
+        color: #fff;
+    }
+    @media (max-width: 768px) {
+        .cta-banner-inner {
+            padding: 36px 28px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .cta-content p {
+            margin: 0 auto;
+        }
+        .cta-actions {
+            justify-content: center;
+        }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+        .hero-section {
+            padding: 60px 0 40px;
+            min-height: auto;
+        }
+        .hero-image-card {
+            max-width: 100%;
+        }
+        .floating-badge {
+            display: none;
+        }
+        .hero-mini-grid {
+            justify-content: center;
+        }
+        .hero-text {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 576px) {
+        .hero-title {
+            font-size: 1.9rem;
+        }
+        .hero-badge {
+            font-size: 0.7rem;
+            padding: 6px 14px;
+        }
+        .btn-nfc,
+        .btn-outline-primary {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+        .hero-image-label {
+            padding: 10px 14px;
+        }
+        .hero-image-label strong {
+            font-size: 0.85rem;
+        }
+        .hero-image-label span {
+            font-size: 0.6rem;
+        }
+        .stats-grid {
+            gap: 10px;
+        }
+        .stat-number {
+            font-size: 1.6rem;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+        }
+        .feature-card {
+            padding: 28px 18px 24px;
+        }
+        .brands-logos {
+            gap: 14px;
+        }
+        .brand-placeholder {
+            padding: 6px 14px;
+            font-size: 0.75rem;
+        }
+        .scroll-indicator {
+            display: none;
+        }
+        .shape-1,
+        .shape-2,
+        .shape-3 {
+            display: none;
+        }
+    }
+
+    /* ===== UTILITY ===== */
+    .position-relative {
+        position: relative;
+    }
+    .z-2 {
+        z-index: 2;
+    }
+    .gap-3 {
+        gap: 1rem;
+    }
+    .gap-4 {
+        gap: 1.5rem;
+    }
+    .mt-3 {
+        margin-top: 1rem;
+    }
+    .mt-4 {
+        margin-top: 1.5rem;
+    }
+    .mt-5 {
+        margin-top: 2.5rem;
+    }
+    .mb-5 {
+        margin-bottom: 2.5rem;
+    }
+    .py-5 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .pt-4 {
+        padding-top: 1.5rem;
+    }
+    .bg-white {
+        background: #fff;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-muted {
+        color: #6b7280;
+    }
+    .fw-bold {
+        font-weight: 700;
+    }
+    .fw-semibold {
+        font-weight: 600;
+    }
+    .d-flex {
+        display: flex;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    .align-items-center {
+        align-items: center;
+    }
+    .justify-content-center {
+        justify-content: center;
+    }
+    .gap-3 {
+        gap: 0.75rem;
+    }
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .list-unstyled {
+        list-style: none;
+        padding-left: 0;
+    }
+    .h-100 {
+        height: 100%;
+    }
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    @media (min-width: 768px) {
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .col-lg-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        .col-lg-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    .order-1 {
+        order: 1;
+    }
+    .order-2 {
+        order: 2;
+    }
+    @media (min-width: 992px) {
+        .order-lg-1 {
+            order: 1;
+        }
+        .order-lg-2 {
+            order: 2;
+        }
+    }
+    .gy-5 {
+        --bs-gutter-y: 2.5rem;
+    }
+    .g-4 {
+        --bs-gutter: 1.5rem;
+    }
+    .gap-3 {
+        gap: 0.75rem;
+    }
+</style>
+<script src="{% static 'catalog/js/homepage.js' %}"></script>
 {% endblock %}

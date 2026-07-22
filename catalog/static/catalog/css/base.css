@@ -1,0 +1,13 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+:root {
+  --nfc-blue: #0d4f9b;
+  --nfc-blue-dark: #083c76;
+  --nfc-dark: #1f2937;
+  --nfc-light: #f8fafc;
+  --nfc-gold: #b8892f;
+  --nfc-soft-blue: #eef4fb;
+  --nfc-gold: #c79a2d;
+}

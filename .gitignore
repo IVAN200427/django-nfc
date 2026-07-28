@@ -1,17 +1,29 @@
+# Python
 venv/
 __pycache__/
 *.pyc
+
+# Database
 db.sqlite3
+*.sqlite3
+
+# Environment variables
 .env
+
+# User uploaded files
 media/
+
+# Collected static files
 staticfiles/
-# OS files (prevents hidden system files from leaking in)
+
+# Logs
+*.log
+
+# OS files
 .DS_Store
 Thumbs.db
 
-# IDE and Editor configurations (keeps your personal VS Code settings out of the repo)
+# IDE and Editor
 .vscode/
 .idea/
-
-# Local history or backup tools
 .history/

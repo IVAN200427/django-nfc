@@ -1,4 +1,4 @@
-{% extends 'catalog/base.html' %} {% block title %} Contact NFC Industrial
+{% extends 'catalog/base.html' %} {% block title %} Contact NFC Industrial 
 {%endblock %} {% block content %}
 
 <section class="container py-5">
@@ -65,20 +65,25 @@
     {{ form.message }}
 
 </div>
-            </div>
+            <form method="POST">
+          {% csrf_token %}
 
-            <button class="btn btn-nfc btn-lg" type="submit">
-              Send Message
+          <!-- form fields -->
+
+             <button class="btn btn-nfc btn-lg w-100" type="submit">
+             Send Message
             </button>
-          <form method="POST">
-            <a
-               href="https://wa.me/263779563090?text=Hello NFC I am interested in {{ product.name }}"
-               target="_blank"
-               class="btn btn-success"
-               >
-               WhatsApp us 
-             </a>
 
+           <a href="https://wa.me/263779563090?text=Hello NFC, I would like to make an enquiry."
+                target="_blank"
+               class="btn btn-whatsapp">
+
+            <i class="fab fa-whatsapp"></i>
+              Chat with us on WhatsApp
+
+        
+        
+</form>
     {% csrf_token %}
         </div>
       </div>
@@ -87,3 +92,4 @@
 </section>
 
 {% endblock %}
+

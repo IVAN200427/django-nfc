@@ -1,0 +1,95 @@
+/* ==========================
+   QUOTE CARD
+==========================*/
+
+.quote-card{
+
+    background:#fff;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    border:1px solid #edf1f5;
+
+}
+
+.quote-title{
+
+    font-size:2rem;
+    font-weight:700;
+    color:#1f2937;
+    margin-bottom:30px;
+
+}
+
+/* Labels */
+
+.quote-card label{
+
+    font-weight:600;
+    margin-bottom:8px;
+    color:#374151;
+
+}
+
+/* Inputs */
+
+.quote-card input,
+.quote-card textarea,
+.quote-card select{
+
+    width:100%;
+    border-radius:10px;
+    border:1px solid #d8dde5;
+    padding:14px 16px;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+/* Focus */
+
+.quote-card input:focus,
+.quote-card textarea:focus,
+.quote-card select:focus{
+
+    border-color:#0d6efd;
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+    outline:none;
+
+}
+
+/* Textarea */
+
+.quote-card textarea{
+
+    min-height:170px;
+    resize:vertical;
+
+}
+
+/* Buttons */
+
+.quote-card .btn{
+
+    padding:15px;
+    border-radius:10px;
+    font-weight:600;
+
+}
+
+/* WhatsApp */
+
+.btn-whatsapp{
+
+    background:#25D366;
+    color:white;
+    border:none;
+
+}
+
+.btn-whatsapp:hover{
+
+    background:#1ebc5b;
+    color:white;
+
+}

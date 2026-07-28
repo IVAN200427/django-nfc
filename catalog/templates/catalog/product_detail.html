@@ -16,22 +16,22 @@
   <div class="container">
     <div class="row g-5">
       <div class="col-lg-6">
-  <div class="product-image-wrapper">
-    {% if product.image %}
-      <img
-        src="{{ product.image.url }}"
-        class="img-fluid product-detail-image"
-        alt="{{ product.title }}"
-        loading="lazy" />
-    {% else %}
-      <img
-        src="{% static 'images/no-image.png' %}"
-        class="img-fluid product-detail-image"
-        alt="No image available"
-        loading="lazy" />
-    {% endif %}
-  </div>
-</div>
+        <div class="product-image-wrapper">
+          {% if product.image %}
+            <img
+              src="{{ product.image.url }}"
+              class="img-fluid product-detail-image"
+              alt="{{ product.title }}"
+              loading="lazy" />
+          {% else %}
+            <img
+              src="{% static 'images/no-image.png' %}"
+              class="img-fluid product-detail-image"
+              alt="No image available"
+              loading="lazy" />
+          {% endif %}
+        </div>
+      </div>
 
       <div class="col-lg-6">
         <span class="product-detail-category">
@@ -54,7 +54,6 @@
             <span class="spec-label"> Finish </span>
             <span class="spec-value"> {{ product.finish }} </span>
           </div>
-          
 
           <div class="spec-item">
             <span class="spec-label"> Category </span>
@@ -63,51 +62,59 @@
         </div>
 
         <div class="quote-card mt-4">
-          <h4 class="mb-4">Request Bulk Quote</h4>
+          <h4 class="quote-title">Request Bulk Quote</h4>
 
           <form method="POST">
             {% csrf_token %}
 
             <div class="mb-3">
-              <label class="form-label"> Your Name </label>
+              <label class="form-label">Your Name</label>
               {{ form.customer_name }}
             </div>
 
             <div class="mb-3">
-              <label class="form-label"> Company Name </label>
+              <label class="form-label">Company Name</label>
               {{ form.company_name }}
             </div>
 
             <div class="mb-3">
-              <label class="form-label"> Email Address </label>
+              <label class="form-label">Email Address</label>
               {{ form.email }}
             </div>
 
             <div class="mb-3">
-              <label class="form-label"> Phone Number </label>
+              <label class="form-label">Phone Number</label>
               {{ form.phone_number }}
             </div>
 
-            <div class="mb-3">
-              <label class="form-label"> Message us </label>
+            <div class="mb-4">
+              <label class="form-label">Tell us about your requirements</label>
               {{ form.message }}
             </div>
 
-            <button type="submit" class="btn btn-nfc w-100">
-              Submit Quote Inquiry
-            </button>
-            <a
-href="https://wa.me/263779563090?text=Hello NFC I am interested in {{ product.name }}"
-target="_blank"
-class="btn btn-success"
->
-WhatsApp Inquiry
-</a>
-            
+            <div class="d-grid gap-3">
+              <button type="submit" class="btn btn-nfc btn-lg">
+                Submit Quote Inquiry
+              </button>
+
+             <a
+             
+               href="https://wa.me/263714719387?text=Hello NFC I am interested in {{ product.title }}"
+               target="_blank"
+               class="btn btn-whatsapp">
+
+               <i class="fab fa-whatsapp me-2"></i>
+               Request Quote via WhatsApp
+
+              </a>
+              
+              <link rel="stylesheet"
+                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+              
+            </div>
           </form>
         </div>
       </div>
-
     </div>
   </div>
 </section>

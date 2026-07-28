@@ -3,11 +3,117 @@
 ========================================= */
 
 :root {
+ 
   --nfc-blue: #0d4f9b;
   --nfc-blue-dark: #083c76;
   --nfc-dark: #1f2937;
   --nfc-light: #f8fafc;
   --nfc-gold: #b8892f;
   --nfc-soft-blue: #eef4fb;
-  --nfc-gold: #c79a2d;
+  --font-primary: 'Open Sans', sans-serif;
+
+}
+/* ===========================
+   Quote Form
+=========================== */
+
+.quote-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.quote-card h4{
+    font-size:30px;
+    font-weight:700;
+    color:#0a2463;
+    margin-bottom:30px;
+}
+
+.quote-card .form-label{
+    font-weight:600;
+    color:#333;
+    margin-bottom:8px;
+}
+
+.quote-card .form-control{
+    border-radius:10px;
+    padding:14px 18px;
+    border:1px solid #d6d6d6;
+    transition:.3s;
+    width:100%;
+}
+
+.quote-card .form-control:focus{
+    border-color:#0a2463;
+    box-shadow:0 0 0 .2rem rgba(10,36,99,.15);
+}
+
+.quote-card textarea{
+    resize:vertical;
+    min-height:170px;
+}
+
+.quote-card .btn{
+
+    width:100%;
+    border-radius:10px;
+    padding:15px;
+    font-weight:600;
+    margin-top:15px;
+
+}
+
+.quote-card .btn-success{
+    width:100%;
+    margin-top:12px;
+}
+/* ===========================
+   WhatsApp Button
+=========================== */
+.quote-card .btn-whatsapp{
+    background-color:#25D366 !important;
+    border-color:#25D366 !important;
+    color:white !important;
+
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+}
+
+.quote-card .btn-whatsapp:hover{
+    background-color:#1EBE5B !important;
+    border-color:#1EBE5B !important;
+    color:white !important;
+}
+
+.btn-whatsapp{
+    background-color:#25D366 !important;
+    border-color:#25D366 !important;
+    color:#fff !important;
+
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+}
+
+.btn-whatsapp:hover{
+    background-color:#1EBE5B !important;
+    border-color:#1EBE5B !important;
+    color:#fff !important;
 }

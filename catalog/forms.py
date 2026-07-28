@@ -3,6 +3,8 @@ from django import forms
 from .models import QuoteInquiry
 from .models import ContactMessage
 
+from django import forms
+from .models import QuoteInquiry
 
 class QuoteInquiryForm(forms.ModelForm):
 
@@ -14,48 +16,37 @@ class QuoteInquiryForm(forms.ModelForm):
             'company_name',
             'email',
             'phone_number',
-            'message',
+            'message'
         ]
 
-widgets = {
+        widgets = {
 
-    'customer_name': forms.TextInput(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Your Name',
-        }
-    ),
+            'customer_name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Your Name'
+            }),
 
-    'company_name': forms.TextInput(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Company Name',
-        }
-    ),
+            'company_name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Company Name'
+            }),
 
-    'email': forms.EmailInput(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Email Address',
-        }
-    ),
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Email Address'
+            }),
 
-    'phone_number': forms.TextInput(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Phone Number',
-        }
-    ),
+            'phone_number': forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Phone Number'
+            }),
 
-    'message': forms.Textarea(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Project Requirements',
-            'rows': 5,
-        }
-    ),
-}
-        
+            'message': forms.Textarea(attrs={
+                'class': 'form-control',
+                'rows': 6,
+                'placeholder': 'Tell us about your project...'
+            }),
+        }        
 class ContactMessageForm(forms.ModelForm):
 
     class Meta:

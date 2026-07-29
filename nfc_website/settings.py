@@ -59,9 +59,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-STATICFILES_STORAGE = (
-    'whitenoise.storage.CompressedManifestStaticFilesStorage'
-)
+
+
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
@@ -136,7 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / "static",
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -170,25 +169,22 @@ if not DEBUG:
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
 
+
     LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-
     "handlers": {
-        "file": {
-            "level": "ERROR",
-            "class": "logging.FileHandler",
-            "filename": BASE_DIR / "django_errors.log",
+        "console": {
+            "class": "logging.StreamHandler",
         },
     },
-
-    "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "ERROR",
-            "propagate": True,
-        },
+    "root": {
+        "handlers": ["console"],
+        "level": "ERROR",
     },
 }
+
+    
+
     # Trust the ngrok secure link for form submissions
 CSRF_TRUSTED_ORIGINS = ['https://keg-confident-slouchy.ngrok-free.dev']

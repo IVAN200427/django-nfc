@@ -1,0 +1,711 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "name": "kitchen Mixers",
+    "slug": "kitchen-mixers"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "name": "Basin Taps",
+    "slug": "basin-taps"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+    "name": "Stop cocks",
+    "slug": "stop-cocks"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Waste Outlets",
+    "slug": "waste-outlets"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Shower Fittings",
+    "slug": "shower-fittings"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "15MM Sink wall mixer",
+    "slug": "15mm-sink-wall-mixer",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Heavy-duty exposed wall-mounted sink mixer featuring a high-arch 360-degree swivel spout. Equipped with precise quarter-turn ceramic disc valves for smooth flow control and long-lasting durability. Designed for dual hot and cold water blending in commercial kitchens, catering environments, and residential sculleries.",
+    "image": "products/15MM_Sink_wall_mixer1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T08:32:48.405Z",
+    "updated_at": "2026-05-23T11:14:14.118Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "category": 4,
+    "title": "40mm marble watse",
+    "slug": "40mm-marble-watse",
+    "inlet_size": "40mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium-grade hybrid brass and chrome-plated sink waste outlet designed for maximum drainage efficiency and leak prevention. Features a high-polished chrome top flange for a sleek finish, a durable rubber sealing washer, and a heavy-pattern natural brass backnut for secure, high-torque under-sink installation. Supplied complete with a heavy-duty black rubber plug and integrated metal pull ring. Engineered to resist corrosion from detergents and boiling water, making it perfect for both domestic residential and demanding commercial catering environments.",
+    "image": "products/40mm_marble_watse.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T12:02:47.945Z",
+    "updated_at": "2026-05-20T12:13:12.929Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "category": 4,
+    "title": "40mm RB shower Ptrap",
+    "slug": "40mm-rb-shower-ptrap",
+    "inlet_size": "40mm",
+    "finish": "Natural Brass",
+    "technical_description": "High-grade, solid cast non-ferrous brass floor P-Trap engineered for commercial, industrial, and wet-room drainage installations. Designed with a deep internal water seal to effectively prevent the backflow of sewer gases, pests, and foul odors into the facility. Features a rugged, rough-cast brass body for extreme corrosion resistance and underground longevity, paired with a removable, high-flow polished stainless steel grate for easy cleaning and debris filtration. Built to withstand heavy structural loading and high water temperatures, making it the premier choice for public restrooms, commercial kitchens, factories, and agricultural wash bays.",
+    "image": "products/40mm_RB_shower_Ptrap_.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T12:06:00.060Z",
+    "updated_at": "2026-05-20T12:06:00.060Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "category": 4,
+    "title": "20mm marble waste",
+    "slug": "20mm-marble-waste",
+    "inlet_size": "20mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Precision-machined non-ferrous brass basin waste outlet engineered specifically for domestic and commercial bathroom washhand basin installations. Features a space-saving low-profile design ideal for tight undersink vanities. Built with a mirror-finish polished chrome top flange, a durable black anti-perforation rubber basin washer, and a heavy-gauge solid brass locking nut to ensure a permanent, watertight compression seal. Supplied complete with an ergonomic, tight-fitting rubber plug featuring an integrated triangular pulling triangle. Engineered for high-frequency daily usage, offering exceptional resistance to thermal shock, soap buildup, and tarnishing",
+    "image": "products/40mm_marble_waste.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T12:09:56.179Z",
+    "updated_at": "2026-06-07T12:09:52.133Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "title": "15mm RB Bip tap HU",
+    "slug": "15mm-rb-bip-tap-hu",
+    "inlet_size": "15mm",
+    "finish": "Natural Brass",
+    "technical_description": "Heavy-pattern industrial hose-union bibcock tap manufactured from high-grade solid cast non-ferrous brass alloy. Engineered specifically for demanding outdoor, agricultural, and commercial wash-down installations. Features a classic, easy-grip T-head handle operating a robust internal brass spindle mechanism for reliable flow regulation. The tap spout includes an integrated threaded nose supplied complete with a brass union nut and a durable, ribbed black hose tail connector for secure, leak-free garden hose attachments. Built to offer maximum resistance to frost, thermal expansion, and harsh environmental weathering.",
+    "image": "products/15mm_RB_Bip_tap_HU.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T12:13:07.606Z",
+    "updated_at": "2026-05-20T12:13:07.606Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "category": 5,
+    "title": "15mm Bath mixer Edwaian",
+    "slug": "15mm-bath-mixer-edwaian",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium exposed wall-mounted bath and shower mixer combination unit, precision-engineered from high-grade non-ferrous brass components. Finished in an ultra-durable, corrosion-resistant polished chrome plating designed to maintain a mirror-like luster over high-frequency usage. Features traditional ergonomic star-head cross handles fitted with clear, high-contrast white \"Hot\" and \"Cold\" indices for accurate temperature adjustments. Equipped with an integrated central manual diverter mechanism that seamlessly transitions water flow between the high-flow bath filler spout and the included handheld shower kit. The shower attachment features a flexible, double-interlock stainless steel hose paired with an ergonomic multi-nozzle spray head designed for easy lime-scale removal. Ideal for high-end residential developments, luxury hotel installations, and modern commercial upgrades.",
+    "image": "products/15mm_Bath_mixer_Edwaian.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T12:58:15.820Z",
+    "updated_at": "2026-06-05T09:06:05.746Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "category": 5,
+    "title": "Texas swivel shower",
+    "slug": "texas-swivel-shower",
+    "inlet_size": "22mm",
+    "finish": "Polished Chrome",
+    "technical_description": "High-performance adjustable swivel tap aerator and spray nozzle attachment, precision-engineered from premium non-ferrous brass internals and encased in a durable polished chrome housing. Features an integrated heavy-duty omnidirectional ball joint providing smooth 360-degree rotation for full sink basin coverage. Designed with a dual-function spray mechanism controlled via an ergonomic knurled adjustment ring; users can seamlessly transition between a soft, water-saving aerated stream and a high-velocity pressurized spray pattern. Equipped with a premium micro-aperture spray faceplate to enhance water velocity while significantly reducing splashing and overall consumption. Ideal for retrofitting onto commercial kitchen taps, institutional sculleries, and high-efficiency residential faucets.",
+    "image": "products/Texas_swivel_shower.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T13:02:01.983Z",
+    "updated_at": "2026-06-05T09:06:56.128Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "category": 3,
+    "title": "15mm RB Stop cock",
+    "slug": "15mm-rb-stop-cock",
+    "inlet_size": "15mm",
+    "finish": "Natural Brass",
+    "technical_description": "Premium heavy-pattern inline brass stopcock engineered for reliable flow control and system isolation in high-pressure water networks. Manufactured from precision-cast non-ferrous brass alloy, this valve features heavy-gauge internal female-threaded connections on both ends for seamless integration into standard metallic or threaded composite piping systems. Equipped with an ergonomic, high-torque brass T-head handle operating a resilient internal compression valve seating mechanism to guarantee a complete, bubble-tight shutoff. Built for maximum dezincification resistance and long-term subterranean or inline structural durability, making it the definitive choice for main supply line isolations in residential complexes, commercial developments, and agricultural irrigation networks.",
+    "image": "products/15mm_RB_Stop_cock_WcAc3Nh.jpg",
+    "is_featured": true,
+    "created_at": "2026-05-20T13:05:52.288Z",
+    "updated_at": "2026-05-20T13:05:52.288Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "title": "NFC Chrome High-Neck Laboratory Swan-Neck Tap",
+    "slug": "nfc-chrome-high-neck-laboratory-swan-neck-tap",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "High-specification deck-mounted laboratory swan-neck tap, precision-engineered from premium non-ferrous brass alloy and finished in a heavy-duty, chemical-resistant polished chrome plating. Designed specifically for educational science classrooms, medical institutions, testing laboratories, and industrial cleanrooms. Features an extra-high arch gooseneck spout providing maximum clearance for filling and washing tall laboratory glassware, cylinders, and specialized equipment. The spout is terminated with a precision-machined serrated hose nozzle tip, engineered to form a tight, leak-free friction fit with flexible rubber or silicone laboratory tubing. Controlled via an ergonomic four-arm cross handle with a high-visibility blue cold-water index marker, operating a heavy-duty compression headwork for precise flow control. Supplied with an elongated threaded shank, washers, and brass backnut for secure installation through thick countertops and specialized lab benches.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.13_1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T13:10:33.336Z",
+    "updated_at": "2026-05-20T13:10:33.336Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "category": 3,
+    "title": "NFC 15mm Chrome Concealed Underwall Stopcock",
+    "slug": "nfc-15mm-chrome-concealed-underwall-stopcock",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium-grade concealed inline underwall stopcock, precision-engineered from heavy-pattern non-ferrous brass internals and finished in a high-lustre, corrosion-resistant polished chrome plating. Designed specifically for embedded wall installations in modern residential bathrooms, commercial washrooms, and luxury hotel suites to facilitate discrete water isolation for showers, basins, and bidets. Features a traditional ergonomic four-arm star cross handle equipped with an authentic high-visibility blue \"NFC\" branded center index cap. The rugged, heavy-wall valve body is configured with parallel female-threaded inlets to ensure a completely leak-free connection to internal masonry piping. Engineered for smooth manual headwork operation and extreme resistance to lime-scale scaling, ensuring maximum operational longevity behind finished tile work.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.10.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-20T13:13:31.166Z",
+    "updated_at": "2026-05-20T13:13:31.167Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "category": 2,
+    "title": "NFC Chrome Basin Pillar Tap",
+    "slug": "nfc-chrome-basin-pillar-tap",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium polished chrome basin pillar tap featuring a durable brass body core, smooth star-handle operation, and a 15mm threaded inlet connection. Manufactured by Non-Ferrous Casting in Norton, Zimbabwe. Suitable for industrial, commercial, and residential plumbing setups.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.06_1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:15:55.797Z",
+    "updated_at": "2026-05-21T12:15:55.797Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "category": 1,
+    "title": "NFC Chrome Deck-Mounted Gooseneck Mixer",
+    "slug": "nfc-chrome-deck-mounted-gooseneck-mixer",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium dual-control kitchen mixer tap featuring a deck-mounted installation base, high-grade brass internal body construction, and a mirror-finish polished chrome plating. Equipped with an elegant high-rise gooseneck swivel spout and a specialized serrated nozzle tip for industrial, laboratory, or commercial catering hose connections. Designed and manufactured for heavy-duty performance by Non-Ferrous Casting in Norton, Zimbabwe.",
+    "image": "products/15mm_Laboratory_mixer_tap.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:20:39.750Z",
+    "updated_at": "2026-05-21T12:20:39.750Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "category": 1,
+    "title": "NFC Chrome Pillar-Mounted Gooseneck Mixer",
+    "slug": "nfc-chrome-pillar-mounted-gooseneck-mixer",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Heavy-duty commercial-grade gooseneck mixer tap featuring a unified pillar-mounted monobloc base with distinctive angled dual star-handle controls. Constructed with a premium solid brass inner core and finished in high-shine polished chrome plating. Designed with an extra-tall, high-clearance swivel gooseneck spout and a serrated nozzle tip for secure hose connections in commercial, catering, or industrial laboratory environments. Manufactured locally by Non-Ferrous Casting in Norton, Zimbabwe.",
+    "image": "products/15mm_Single_Hole_Lab__Mixer_Tap.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:23:27.368Z",
+    "updated_at": "2026-05-21T12:23:27.368Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "title": "NFC Premium Pillar Gooseneck Mixer (Teardrop Handles)",
+    "slug": "nfc-premium-pillar-gooseneck-mixer-teardrop-handle",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium monobloc kitchen mixer tap featuring a central pillar-mounted configuration with sleek, ergonomic teardrop dual control handles for precise water temperature and flow management. Built with a solid brass core structure and coated in an ultra-reflective polished chrome plating. Designed with a high-clearance curved swivel gooseneck spout and integrated water-saving internal aerator to ensure a smooth, splash-free stream. Engineered for modern commercial kitchens and premium residential applications by Non-Ferrous Casting in Norton, Zimbabwe",
+    "image": "products/15mm_single_Hole_mixer_delta_Tri.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:25:02.282Z",
+    "updated_at": "2026-05-21T12:25:02.282Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "category": 1,
+    "title": "15mm Single Hole Mixer (Edwardian Loop Cast)",
+    "slug": "15mm-single-hole-mixer-edwardian-loop-cast",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium 15mm single-hole monobloc mixer tap featuring an elegant Edwardian Loop Cast design. Equipped with classic four-spoke crosshead handles with smooth ball-end detailing for effortless, precise water control. Built with a heavy-duty solid brass core structure and finished in a high-mirror polished chrome plating. Features a smooth-turning arched swivel spout with an integrated low-splash internal aerator nozzle. Engineered for timeless aesthetic appeal and durable performance in luxury commercial and residential plumbing installations by Non-Ferrous Casting in Norton, Zimbabwe.",
+    "image": "products/15mm_single_Hole_mixer_Edw_L_Cast.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:29:22.093Z",
+    "updated_at": "2026-05-21T12:29:22.093Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "category": 1,
+    "title": "15mm Single Hole Mixer (Tri Handles",
+    "slug": "15mm-single-hole-mixer-tri-handles",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium 15mm single-hole monobloc mixer tap featuring distinctive ergonomic Tri-fin control handles for precise, smooth temperature and water flow regulation. Fabricated with a solid cast brass inner core and finished with a durable, high-mirror polished chrome plating. Equipped with an elegant, high-clearance arched swivel gooseneck spout and a built-in internal aerator nozzle to deliver a soft, splash-free stream. Engineered for modern aesthetic appeal and heavy-duty reliability in busy commercial kitchens and upscale residential properties by Non-Ferrous Casting in Norton, Zimbabwe",
+    "image": "products/15mm_single_hole_mixer_Tri.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:34:09.289Z",
+    "updated_at": "2026-05-21T12:34:09.289Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+    "category": 1,
+    "title": "15mm Sink Wall Mixer (Star Handles)",
+    "slug": "15mm-sink-wall-mixer-star-handles",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Industrial-grade 15mm wall-mounted sink mixer tap featuring classic four-spoke star handles for separate hot and cold water management. Built with a robust solid cast brass core body and heavily plated in high-mirror polished chrome. Engineered with an overhead high-clearance swivel gooseneck spout and an integrated water-saving internal aerator nozzle. Includes dual eccentric cranked pillars and conical wall flanges to accommodate variable pipe centers during direct wall-mount installation. Manufactured for heavy-duty commercial and residential kitchens by Non-Ferrous Casting in Norton, Zimbabwe.",
+    "image": "products/15MM_Sink_wall_mixer1_94fI3JT.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T12:37:57.325Z",
+    "updated_at": "2026-05-21T12:37:57.325Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 18,
+  "fields": {
+    "category": 5,
+    "title": "170mm Long Cast Shower Arm (Chrome Plated)",
+    "slug": "170mm-long-cast-shower-arm-chrome-plated",
+    "inlet_size": "170mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Premium 170mm wall-mounted horizontal shower arm featuring a durable cast brass inner framework and heavy-duty polished chrome plating (CP). Designed with a standard 15mm (1/2\" BSP) male threaded inlet connection for stable direct-wall plumbing integration. Features a elegant 90-degree downward outlet bend with an integrated rubber O-ring gasket for a leak-free shower head installation. Supplied complete with a matching conical chrome wall cover flange to hide rough pipe cutouts. Manufactured to international engineering standards by Non-Ferrous Casting in Norton, Zimbabwe.",
+    "image": "products/170mm_long_cast_shower_arm_CP_.jpeg",
+    "is_featured": true,
+    "created_at": "2026-05-21T13:29:19.755Z",
+    "updated_at": "2026-05-21T13:29:19.755Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 19,
+  "fields": {
+    "category": 3,
+    "title": "Premium Chrome-Plated Stopcock Valve (NFC Series)",
+    "slug": "premium-chrome-plated-stopcock-valve-nfc-series",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "\"Engineered for maximum durability and precision fluid control, the NFC Premium Chrome-Plated Stopcock Valve is manufactured from high-grade corrosion-resistant brass casting and finished with a high-shine industrial chrome plating. Featuring an ergonomic four-prong star handle designed for high-torque manual operation, this valve ensures smooth, leak-free isolation for commercial and residential water lines. Complete with signature NFC blue branding cap and heavy-duty threaded inlets for secure plumbing integration",
+    "image": "products/1520mm_undertile_stop_cock_STD.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T09:03:02.549Z",
+    "updated_at": "2026-06-05T09:03:02.549Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 20,
+  "fields": {
+    "category": 2,
+    "title": "Premium Chrome-Plated Pillar Tap (Star Handle Series)",
+    "slug": "premium-chrome-plated-pillar-tap-star-handle-serie",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "\"Designed for style, durability, and reliable performance, the NFC Premium Chrome-Plated Pillar Tap is constructed from cast solid brass and finished with premium-grade reflective chrome plating. It features a classic four-prong star handle for comfortable manual control and precision water flow. The durable brass threaded base and mounting nut ensure easy and stable installation on commercial or residential basins. Ideal for high-traffic environments requiring low maintenance and a clean, timeless finish.\"",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.06.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T09:11:09.845Z",
+    "updated_at": "2026-06-05T09:11:09.845Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 21,
+  "fields": {
+    "category": 2,
+    "title": "Modern Chrome Basin Pillar Tap (Crystal Handle Series)",
+    "slug": "modern-chrome-basin-pillar-tap-crystal-handle-seri",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "elevate commercial and residential washspaces with the NFC Modern Chrome Basin Pillar Tap. Expertly engineered from high-purity cast brass, this fixture offers exceptional wear resistance and is enveloped in a flawless, mirror-shine protective chrome finish. It features an elegant, ergonomic fluted crystal-clear acrylic headwork handle with an integrated blue fluid indicator ring for smooth, precise adjustments. Complete with a robust under-basin threaded mounting assembly and backing washer, it delivers low-maintenance, leak-free reliability with an upscale aesthetic.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.07_1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T09:16:53.999Z",
+    "updated_at": "2026-06-05T09:16:53.999Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 22,
+  "fields": {
+    "category": 2,
+    "title": "Modern Chrome Pillar Tap (Scalloped Club Handle Series)",
+    "slug": "chrome-pillar-tap-scalloped-club-handle-series",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Engineered for high-end architectural appeal and rigorous performance, the NFC Scalloped Club Handle Pillar Tap is precision-cast from premium corrosion-resistant brass. Enveloped in a deep, multi-layered reflective chrome plating, it provides superior resistance to tarnish and water spotting. The robust, ergonomic club headwork handle features smooth, scalloped contours for effortless manual actuation. Outfitted with an extended under-basin threaded inlet, stability washer, and heavy locking nut, this tap ensures a secure installation and lifelong leak-free performance in premium commercial and residential properties.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.07_2.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T09:28:18.747Z",
+    "updated_at": "2026-06-05T09:48:31.685Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 23,
+  "fields": {
+    "category": 2,
+    "title": "Modern Chrome Pillar Tap (Triangular Teardrop Handle Series)",
+    "slug": "modern-chrome-pillar-tap-triangular-teardrop-handl",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Engineered with a contemporary minimalist aesthetic, the NFC Triangular Teardrop Handle Pillar Tap combines fluid ergonomics with heavy-duty construction. Precision-cast from high-grade solid brass and sealed in a flawless, corrosion-resistant reflective chrome finish, this tap is built to survive high-frequency usage without losing its mirror-like shine. The smooth-operating triangular headwork handle offers effortless water control and is accented by a central blue indicator button. Ideal for modern commercial restrooms, institutions, and premium residential spaces requiring low-maintenance reliability",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.08.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T10:00:24.051Z",
+    "updated_at": "2026-06-05T10:00:24.051Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 24,
+  "fields": {
+    "category": 2,
+    "title": "Classic Chrome Basin Pillar Tap (Red Star Handle Series)",
+    "slug": "classic-chrome-basin-pillar-tap-red-star-handle-se",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "A timeless combination of durability and traditional engineering, the NFC Red Star Handle Pillar Tap is designed for reliable hot-water delivery in high-demand environments. Cast from heavy-duty solid brass and finished with a resilient, reflective chrome plating, this tap is built to resist thermal stress and corrosion. The iconic four-prong star cross-handle offers maximum grip and tactile control, highlighted by a central red indicator marker. Featuring an extended threaded mounting shank and solid secure installation hardware, it represents the industry standard for commercial kitchens, schools, and traditional residential washrooms.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.09_1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T10:05:22.571Z",
+    "updated_at": "2026-06-05T10:05:22.571Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 25,
+  "fields": {
+    "category": 2,
+    "title": "Vintage Luxury Chrome Pillar Tap (Spherical Cross Handle Series)",
+    "slug": "vintage-luxury-chrome-pillar-tap-spherical-cross-h",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Blending classic European elegance with rugged modern durability, the NFC Spherical Cross Handle Pillar Tap is a premier choice for luxury washspaces. Precision-cast from premium solid brass and finished in an ultra-reflective, thick industrial chrome plating, this tap provides a mirror-like shine that easily resists water spots and tarnishing. The distinct four-prong handle features elegant spherical bulb ends for supreme manual ergonomics and an upscale, vintage aesthetic. Engineered with a heavy-duty threaded shank and durable locking hardware, it ensures stable installation and flawless, leak-free fluid control for high-end hospitality or luxury residential environments.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.09.jpeg",
+    "is_featured": false,
+    "created_at": "2026-06-05T11:02:27.798Z",
+    "updated_at": "2026-06-05T11:02:34.064Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 26,
+  "fields": {
+    "category": 2,
+    "title": "Heavy-Duty Industrial Brass T-Handle Stopcock Valve",
+    "slug": "heavy-duty-industrial-brass-t-handle-stopcock-valv",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "\"Built for uncompromising reliability in high-pressure environments, the NFC Heavy-Duty Industrial Brass T-Handle Stopcock Valve is expertly cast from premium-grade, corrosion-resistant solid non-ferrous brass alloy. Engineered with a robust T-junction configuration and deep internal threading, this valve ensures an absolute, leak-free seal for commercial main lines, industrial fluid routing, and underground utility isolation. The heavy-duty cast T-handle offers excellent mechanical leverage for dependable manual actuation even under high line pressure. Designed for maximum lifespan and structural integrity under demanding operating conditions.\"",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.21_1.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T11:05:35.677Z",
+    "updated_at": "2026-06-05T11:05:35.677Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 27,
+  "fields": {
+    "category": 2,
+    "title": "Industrial Flanged Right-Angle Hydrant Valve",
+    "slug": "industrial-flanged-right-angle-hydrant-valve",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Engineered for uncompromising performance in heavy industrial, mining, and municipal water networks, the NFC Industrial Flanged Right-Angle Hydrant Valve is robustly cast from high-tensile, corrosion-resistant non-ferrous alloy. This valve features a secure multi-bolt flanged inlet connection designed to withstand extreme line pressures and eliminate joint stress. The heavy-duty, ergonomic multi-spoke handwheel ensures smooth manual throttling and positive shut-off control under high-velocity flow conditions. With its robust right-angle outlet orientation, this fixture is built to deliver maximum durability and reliable fluid isolation in the harshest operational environments.",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.21_3.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T11:11:46.993Z",
+    "updated_at": "2026-06-05T11:11:46.994Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 28,
+  "fields": {
+    "category": 5,
+    "title": "Heavy-Duty Threaded Industrial Companion Flange",
+    "slug": "heavy-duty-threaded-industrial-companion-flange",
+    "inlet_size": "15mm",
+    "finish": "Polished Chrome",
+    "technical_description": "Precision-engineered for high-pressure industrial plumbing, petrochemical lines, and mining fluid infrastructure, the NFC Heavy-Duty Threaded Companion Flange represents excellence in non-ferrous casting. This component features a flawless, clean-cut internal female thread for high-torque pipe integration, matched with a robust multi-bolt flange layout for uniform pressure distribution and absolute joint rigidity. The mating faces are flat-faced and precision-machined to ensure an airtight, leak-proof seal when compressed against standard gaskets. Built to withstand immense mechanical vibrations and corrosive operational environments",
+    "image": "products/WhatsApp_Image_2026-05-19_at_15.01.19_1.jpeg",
+    "is_featured": false,
+    "created_at": "2026-06-05T11:15:23.331Z",
+    "updated_at": "2026-06-05T11:15:23.331Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 29,
+  "fields": {
+    "category": 3,
+    "title": "Heavy-Duty Brass Ball Valve (Blue Lever Series)",
+    "slug": "heavy-duty-brass-ball-valve-blue-lever-series",
+    "inlet_size": "15mm",
+    "finish": "Natural Brass",
+    "technical_description": "Engineered for high-efficiency flow control and positive shut-off in demanding utility systems, the NFC Heavy-Duty Brass Ball Valve features a premium full-bore design for maximum fluid throughput with minimal pressure drop. Precision-cast from durable, corrosion-resistant brass alloy, this quarter-turn valve utilizes a chrome-plated solid brass ball and high-grade seals to ensure smooth operation and an absolute leak-proof seal. The ergonomic, heavy-duty steel lever handle is vinyl-coated in signature industrial blue for comfortable high-torque operation and easy visibility in complex mechanical arrays. Complete with clean, female-threaded NPT connections for fast and secure pipeline integration.",
+    "image": "products/20mm_RB_stop_Cock.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T11:18:20.868Z",
+    "updated_at": "2026-06-05T11:18:20.868Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 30,
+  "fields": {
+    "category": 4,
+    "title": "Industrial Cast Brass Floor Drain with Chrome P-Trap Assembly",
+    "slug": "industrial-cast-brass-floor-drain-with-chrome-p-tr",
+    "inlet_size": "40mm",
+    "finish": "Natural Brass",
+    "technical_description": "Engineered for high-capacity drainage and long-term structural integrity in commercial kitchens, industrial washspaces, and mining facilities, the NFC Floor Drain Assembly represents premium non-ferrous manufacturing. The unit features a heavy-duty, sand-cast brass P-trap body with an integrated female-threaded outlet for secure pipeline connection and dependable odor-seal performance. It is topped with a precision-fitted, corrosion-resistant chrome-plated square grate designed to facilitate maximum volumetric fluid drainage while filtering out larger debris. Built to withstand heavy foot traffic, mechanical cleaning, and harsh operational environments",
+    "image": "products/40mm_RB_shower_P_Square_.jpeg",
+    "is_featured": true,
+    "created_at": "2026-06-05T11:23:48.655Z",
+    "updated_at": "2026-06-05T11:27:44.966Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 1,
+  "fields": {
+    "product": 5,
+    "customer_name": "Ivan",
+    "company_name": "fiscal suppoer services",
+    "email": "moyomnqobi36@gmail.com",
+    "phone_number": "0779563090",
+    "message": "i need  50 of these  the bip tap",
+    "created_at": "2026-05-21T06:10:30.293Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 2,
+  "fields": {
+    "product": 6,
+    "customer_name": "MNQOBI MOYO",
+    "company_name": "tafadzwa enterprises",
+    "email": "moyomnqobi36@gmail.co",
+    "phone_number": "0772605900",
+    "message": "good day i need these asap",
+    "created_at": "2026-05-21T06:24:37.609Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 3,
+  "fields": {
+    "product": 3,
+    "customer_name": "methembe",
+    "company_name": "ivan technologies",
+    "email": "gmate2287@gmail.com",
+    "phone_number": "0785093119",
+    "message": "good day can i kindly have  40 mm rb shower p trap i need about 200",
+    "created_at": "2026-05-21T06:53:44.245Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 4,
+  "fields": {
+    "product": 3,
+    "customer_name": "methembe",
+    "company_name": "ivan technologies",
+    "email": "gmate2287@gmail.com",
+    "phone_number": "0785093119",
+    "message": "good day i need other 20 products",
+    "created_at": "2026-05-21T07:58:13.069Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 5,
+  "fields": {
+    "product": 18,
+    "customer_name": "tanaka",
+    "company_name": "takanan technologies",
+    "email": "tanaka78@gmail.com",
+    "phone_number": "0779564326",
+    "message": "hey i need 20 pieces",
+    "created_at": "2026-05-22T10:51:12.290Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 6,
+  "fields": {
+    "product": 5,
+    "customer_name": "fana Moyo",
+    "company_name": "fanatechnologied",
+    "email": "fanamoyo12@gmail.com",
+    "phone_number": "0785334541",
+    "message": "good day can i have 50 of these products",
+    "created_at": "2026-05-22T17:28:23.959Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 7,
+  "fields": {
+    "product": 5,
+    "customer_name": "fana Moyo",
+    "company_name": "fanatechnologied",
+    "email": "fanamoyo12@gmail.com",
+    "phone_number": "0785334541",
+    "message": "i want to buy jkkklhjklg",
+    "created_at": "2026-05-24T15:29:31.815Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 8,
+  "fields": {
+    "product": 15,
+    "customer_name": "tanatswa",
+    "company_name": "constructions",
+    "email": "tee@gmail.com",
+    "phone_number": "0795093119",
+    "message": "good day can i have   these products and these their prices",
+    "created_at": "2026-05-26T10:15:01.005Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 9,
+  "fields": {
+    "product": 9,
+    "customer_name": "Ivan",
+    "company_name": "fiscal suppoer services",
+    "email": "moyomnqobi36@gmail.com",
+    "phone_number": "0779563090",
+    "message": "good day can i have this product",
+    "created_at": "2026-06-04T14:51:34.369Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 10,
+  "fields": {
+    "product": 6,
+    "customer_name": "MNQOBI MOYO",
+    "company_name": "tafadzwa enterprises",
+    "email": "moyomnqobi36@gmail.co",
+    "phone_number": "0772605900",
+    "message": "thjhkl;kjhgnbcvnbm,",
+    "created_at": "2026-06-05T07:34:24.365Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 11,
+  "fields": {
+    "product": 5,
+    "customer_name": "MNQOBI MOYO",
+    "company_name": "Ivan tech",
+    "email": "Moyomnqobi36@gmail.com",
+    "phone_number": "0779563090",
+    "message": "Hsuvsvj",
+    "created_at": "2026-06-22T09:31:41.416Z"
+  }
+},
+{
+  "model": "catalog.quoteinquiry",
+  "pk": 12,
+  "fields": {
+    "product": 24,
+    "customer_name": "MNQOBI MOYO",
+    "company_name": "Ivan techies",
+    "email": "Moyomnqobi36@gmail.com",
+    "phone_number": "0779563094",
+    "message": "Fdgccfcv",
+    "created_at": "2026-06-22T11:41:38.155Z"
+  }
+},
+{
+  "model": "catalog.contactmessage",
+  "pk": 1,
+  "fields": {
+    "full_name": "MNQOBI MOYO",
+    "email": "moyomnqobi36@gmail.com",
+    "subject": "bipcock prices",
+    "message": "good day can i kindly know how much bipcok cost",
+    "created_at": "2026-05-22T10:08:04.876Z"
+  }
+},
+{
+  "model": "catalog.contactmessage",
+  "pk": 2,
+  "fields": {
+    "full_name": "Ivan",
+    "email": "moyomnqobi36@gmail.com",
+    "subject": "tapes",
+    "message": "good day can i kindly know how much tapess",
+    "created_at": "2026-05-22T10:09:18.276Z"
+  }
+},
+{
+  "model": "catalog.contactmessage",
+  "pk": 3,
+  "fields": {
+    "full_name": "Ivan",
+    "email": "moyomnqobi36@gmail.com",
+    "subject": "bipcock prices",
+    "message": "ouilykutjydhtfjhgkhl",
+    "created_at": "2026-07-09T11:40:23.730Z"
+  }
+}
+]

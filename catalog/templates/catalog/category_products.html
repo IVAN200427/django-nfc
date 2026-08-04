@@ -1,4 +1,5 @@
 {% extends 'catalog/base.html' %}
+{% load static %}
 
 {% block title %}
 {{ category.name }} | NFC Industrial
@@ -20,13 +21,13 @@ Premium industrial brass fittings and plumbing solutions for commercial applicat
       <div class="card product-card">
 
         <img
-          src="{{ product.image.url }}"
+          src="{% static product.image_path %}"
           class="card-img-top"
-          alt="{{ product.name }}"
-        >
+          alt="{{ product.title }}"
+       >
 
         <div class="card-body">
-          <h5>{{ product.name }}</h5>
+          <h5>{{ product.title }}</h5>
 
           <a
             href="{% url 'product_detail' product.slug %}"

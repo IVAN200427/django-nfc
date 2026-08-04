@@ -4,13 +4,13 @@
 
     <a href="{% url 'product_detail' product.slug %}">
 
-        {% if product.image %}
-            <img
-                src="{{ product.image.url }}"
-                class="card-img-top product-image"
-                alt="{{ product.title }}"
-                loading="lazy"
-            >
+       {% if product.image_path %}
+          <img
+             src="{% static product.image_path %}"
+             class="card-img-top product-image"
+             alt="{{ product.title }}"
+             loading="lazy"
+        >
         {% else %}
             <img
                 src="{% static 'images/no-image.png' %}"

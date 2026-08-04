@@ -17,9 +17,9 @@
     <div class="row g-5">
       <div class="col-lg-6">
         <div class="product-image-wrapper">
-          {% if product.image %}
-            <img
-              src="{{ product.image.url }}"
+          {% if product.image_path %}
+          <img
+             src="{% static product.image_path %}"
               class="img-fluid product-detail-image"
               alt="{{ product.title }}"
               loading="lazy" />

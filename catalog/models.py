@@ -73,9 +73,12 @@ class Product(models.Model):
     technical_description = models.TextField()
     image = models.ImageField(
     upload_to='products/',
-    default='default.jpg'
-
-    
+    default='default.jpg'   
+)
+    image_path = models.CharField(
+    max_length=255,
+    blank=True,
+    help_text="Example: catalog/images/products/myimage.jpg"
 )
 
     is_featured = models.BooleanField(default=False)

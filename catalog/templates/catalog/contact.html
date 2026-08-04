@@ -1,95 +1,108 @@
-{% extends 'catalog/base.html' %} {% block title %} Contact NFC Industrial 
-{%endblock %} {% block content %}
+{% extends 'catalog/base.html' %}
+
+{% block title %}
+Contact NFC Industrial
+{% endblock %}
+
+{% block content %}
 
 <section class="container py-5">
-  <div class="row">
-    <!-- CONTACT DETAILS -->
 
-    <div class="col-lg-5">
-      <h1 class="section-title">Contact Us</h1>
+    <div class="row g-5">
 
-      <p class="lead">
-        Reach out to our sales and support team for industrial product
-        inquiries.
-      </p>
+        <!-- CONTACT DETAILS -->
+        <div class="col-lg-5">
 
-      <hr />
+            <h1 class="section-title">Contact Us</h1>
 
-      <h5>Office Address</h5>
+            <p class="lead">
+                Reach out to our sales and support team for industrial product
+                inquiries.
+            </p>
 
-      <p>
-        50 Galloway Road<br />
-        Norton, Zimbabwe
-      </p>
+            <hr>
 
-      <h5>Email</h5>
+            <h5>Office Address</h5>
 
-      <p>vumimoyo@gmail.com</p>
+            <p>
+                50 Galloway Road<br>
+                Norton, Zimbabwe
+            </p>
 
-      <h5>Phone</h5>
+            <h5>Email</h5>
 
-      <p>+263 714719387/+263 773 390 355</p>
-    </div>
+            <p>
+                vumimoyo@gmail.com
+            </p>
 
-    <!-- CONTACT FORM -->
+            <h5>Phone</h5>
 
-    <div class="col-lg-7">
-      <div class="card shadow border-0">
-        <div class="card-body p-4">
-          <h3 class="mb-4">Send Us a Message</h3>
+            <p>
+                +263 714719387 / +263 773 390 355
+            </p>
 
-          <form method="POST">
-
-    {% csrf_token %}
-            <div class="row">
-              <div class="mb-3">
-
-    {{ form.full_name }}
-
-</div>
-
-<div class="mb-3">
-
-    {{ form.email }}
-
-</div>
-
-<div class="mb-3">
-
-    {{ form.subject }}
-
-</div>
-
-<div class="mb-3">
-
-    {{ form.message }}
-
-</div>
-            <form method="POST">
-          {% csrf_token %}
-
-          <!-- form fields -->
-
-             <button class="btn btn-nfc btn-lg w-100" type="submit">
-             Send Message
-            </button>
-
-           <a href="https://wa.me/263779563090?text=Hello NFC, I would like to make an enquiry."
-                target="_blank"
-               class="btn btn-whatsapp">
-
-            <i class="fab fa-whatsapp"></i>
-              Chat with us on WhatsApp
-
-        
-        
-</form>
-    {% csrf_token %}
         </div>
-      </div>
+
+        <!-- CONTACT FORM -->
+        <div class="col-lg-7">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body p-4">
+
+                    <h3 class="mb-4">
+                        Send Us a Message
+                    </h3>
+
+                    <form method="POST">
+
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            {{ form.full_name }}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.email }}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.subject }}
+                        </div>
+
+                        <div class="mb-4">
+                            {{ form.message }}
+                        </div>
+
+                        <button
+                            class="btn btn-nfc btn-lg w-100"
+                            type="submit">
+
+                            Send Message
+
+                        </button>
+
+                        <a
+                            href="https://wa.me/263779563090?text=Hello NFC, I would like to make an enquiry."
+                            target="_blank"
+                            class="btn btn-whatsapp mt-3">
+
+                            <i class="fab fa-whatsapp me-2"></i>
+
+                            Chat with us on WhatsApp
+
+                        </a>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
 {% endblock %}
-

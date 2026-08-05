@@ -1,116 +1,91 @@
-# Register your models here.
 from django.contrib import admin
-from .models import Category, Product, QuoteInquiry
-from .models import ContactMessage
+from django.utils.html import format_html
+from .models import Category, Product, QuoteInquiry, ContactMessage
 
-# =====================================================
-# CATEGORY ADMIN
-# =====================================================
-
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-
-    list_display = (
-        'name',
-        'slug',
-    )
-
-    prepopulated_fields = {
-        'slug': ('name',)
-    }
-
-    search_fields = (
-        'name',
-    )
-
-
-# =====================================================
-# PRODUCT ADMIN
-# =====================================================
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
 
     list_display = (
-        'title',
-        'category',
-        'inlet_size',
-        'finish',
-        'is_featured',
-        'created_at',
+        "image_preview",
+        "title",
+        "category",
+        "finish",
+        "is_featured",
+        "created_at",
     )
 
     list_filter = (
-        'category',
-        'finish',
-        'is_featured',
+        "category",
+        "finish",
+        "is_featured",
     )
 
     search_fields = (
-        'title',
-        'inlet_size',
-        'technical_description',
+        "title",
+        "technical_description",
+        "inlet_size",
+    )
+
+    ordering = (
+        "title",
     )
 
     list_editable = (
-        'is_featured',
+        "is_featured",
     )
 
     prepopulated_fields = {
-        'slug': ('title',)
+        "slug": ("title",)
     }
 
-
-# =====================================================
-# QUOTE INQUIRY ADMIN
-# =====================================================
-
-@admin.register(QuoteInquiry)
-class QuoteInquiryAdmin(admin.ModelAdmin):
-
-    list_display = (
-        'customer_name',
-        'company_name',
-        'product',
-        'email',
-        'phone_number',
-        'created_at',
-    )
-
-    list_filter = (
-        'created_at',
-        'product',
-    )
-
-    search_fields = (
-        'customer_name',
-        'company_name',
-        'email',
-        'phone_number',
-    )
-
     readonly_fields = (
-        'created_at',
-    )
-    
-    
-    
-@admin.register(ContactMessage)
-class ContactMessageAdmin(admin.ModelAdmin):
-
-    list_display = (
-        'full_name',
-        'email',
-        'subject',
-        'created_at',
+        "image_preview_large",
     )
 
-    search_fields = (
-        'full_name',
-        'email',
-        'subject',
+    fieldsets = (
+        ("Basic Information", {
+            "fields": (
+                "title",
+                "slug",
+                "category",
+                "is_featured",
+            )
+        }),
+
+        ("Specifications", {
+            "fields": (
+                "inlet_size",
+                "finish",
+                "technical_description",
+            )
+        }),
+
+        ("Product Image", {
+            "fields": (
+                "image",
+                "image_path",
+                "image_preview_large",
+            )
+        }),
     )
 
-    readonly_fields = (
-        'created_at',
-    )
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" width="55" style="border-radius:6px;" />',
+                obj.image.url
+            )
+        return "-"
+
+    image_preview.short_description = "Image"
+
+    def image_preview_large(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" width="250" style="border-radius:10px;" />',
+                obj.image.url
+            )
+        return "No image"
+
+    image_preview_large.short_description = "Preview"

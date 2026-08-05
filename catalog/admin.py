@@ -3,6 +3,31 @@ from django.utils.html import format_html
 from .models import Category, Product, QuoteInquiry, ContactMessage
 
 
+# ==========================================================
+# CATEGORY ADMIN
+# ==========================================================
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "name",
+        "slug",
+    )
+
+    search_fields = (
+        "name",
+    )
+
+    prepopulated_fields = {
+        "slug": ("name",)
+    }
+
+
+# ==========================================================
+# PRODUCT ADMIN
+# ==========================================================
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
 
@@ -89,3 +114,60 @@ class ProductAdmin(admin.ModelAdmin):
         return "No image"
 
     image_preview_large.short_description = "Preview"
+
+
+# ==========================================================
+# QUOTE INQUIRIES
+# ==========================================================
+
+@admin.register(QuoteInquiry)
+class QuoteInquiryAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "customer_name",
+        "company_name",
+        "product",
+        "email",
+        "phone_number",
+        "created_at",
+    )
+
+    list_filter = (
+        "created_at",
+        "product",
+    )
+
+    search_fields = (
+        "customer_name",
+        "company_name",
+        "email",
+    )
+
+    readonly_fields = (
+        "created_at",
+    )
+
+
+# ==========================================================
+# CONTACT MESSAGES
+# ==========================================================
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+
+    list_display = (
+        "full_name",
+        "email",
+        "subject",
+        "created_at",
+    )
+
+    search_fields = (
+        "full_name",
+        "email",
+        "subject",
+    )
+
+    readonly_fields = (
+        "created_at",
+    )

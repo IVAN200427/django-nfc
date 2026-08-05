@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
+from django.templatetags.static import static
 from .models import Category, Product, QuoteInquiry, ContactMessage
 
 
@@ -94,24 +95,22 @@ class ProductAdmin(admin.ModelAdmin):
             )
         }),
     )
-
     def image_preview(self, obj):
-        if obj.image:
-            return format_html(
-                '<img src="{}" width="55" style="border-radius:6px;" />',
-                obj.image.url
-            )
-        return "-"
-
+       if obj.image_path:
+           return format_html(
+               '<img src="{}" width="55" height="55" style="object-fit:cover;border-radius:6px;" />',
+               static(obj.image_path)
+           )
+       return "-"
     image_preview.short_description = "Image"
 
     def image_preview_large(self, obj):
-        if obj.image:
-            return format_html(
-                '<img src="{}" width="250" style="border-radius:10px;" />',
-                obj.image.url
-            )
-        return "No image"
+      if obj.image_path:
+           return format_html(
+               '<img src="{}" width="300" style="border-radius:10px;max-width:100%;" />',
+               static(obj.image_path)
+           )
+      return "No image available"
 
     image_preview_large.short_description = "Preview"
 

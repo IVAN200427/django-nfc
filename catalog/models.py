@@ -18,6 +18,7 @@ class Category(models.Model):
         return reverse("category_products", kwargs={"category_slug": self.slug})
 
     class Meta:
+        verbose_name = "Category"
         verbose_name_plural = "Categories"
         ordering = ['name']
 
@@ -78,7 +79,7 @@ class Product(models.Model):
     image_path = models.CharField(
     max_length=255,
     blank=True,
-    help_text="Example: catalog/images/products/myimage.jpg"
+    help_text="Example: catalog/images/products/15mm_RB_Bip_tap_HU.jpeg"
 )
 
     is_featured = models.BooleanField(default=False)
@@ -89,6 +90,8 @@ class Product(models.Model):
 
     class Meta:
         ordering = ['title']
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
 
     def save(self, *args, **kwargs):
         """
@@ -154,8 +157,9 @@ class ContactMessage(models.Model):
     )
 
     class Meta:
-
         ordering = ['-created_at']
+        verbose_name = "Contact Message"
+        verbose_name_plural = "Contact Messages"
 
     def __str__(self):
 

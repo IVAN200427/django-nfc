@@ -140,18 +140,19 @@ class ProductAdmin(admin.ModelAdmin):
 
     image_preview_large.short_description = "Preview"
 
-
     def featured_badge(self, obj):
-       if obj.is_featured:
-            return format_html(
-               '<span style="background:#198754;color:white;padding:4px 10px;border-radius:20px;font-size:12px;">Featured</span>'
-            )
+         color = "#198754" if obj.is_featured else "#6c757d"
+         text = "Featured" if obj.is_featured else "Normal"
 
-       return format_html(
-            '<span style="background:#6c757d;color:white;padding:4px 10px;border-radius:20px;font-size:12px;">Normal</span>'
-        )
+         return format_html(
+             '<span style="background:{};color:white;padding:4px 10px;border-radius:20px;font-size:12px;">{}</span>',
+             color,
+             text,
+         )
 
     featured_badge.short_description = "Status"
+
+      
 
 # ==========================================================
 # QUOTE INQUIRIES

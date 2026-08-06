@@ -72,9 +72,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     )
 
-    list_editable = (
-        "is_featured",
-    )
+    list_editable = ()
 
     prepopulated_fields = {
         "slug": ("title",)

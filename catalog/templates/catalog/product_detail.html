@@ -6,7 +6,7 @@
 
 {% block meta_description %}
 {{ product.title }} manufactured by NFC Industrial.
-{{ product.description|truncatewords:25 }}
+{{ {{ product.technical_description }}|truncatewords:25 }}
 {% endblock %}
 
 {% block content %}
@@ -40,7 +40,7 @@
 
         <h1 class="product-detail-title mt-3">{{ product.title }}</h1>
 
-        <p class="product-detail-description">{{ product.description }}</p>
+        <p class="product-detail-description">{{ {{ product.technical_description }} }}</p>
 
         <div class="specifications-card">
           <h4 class="mb-4">Technical Specifications</h4>

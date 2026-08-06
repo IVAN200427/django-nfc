@@ -13,6 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
     list_display = (
         "name",
+        "product_count",
         "slug",
     )
 
@@ -20,9 +21,18 @@ class CategoryAdmin(admin.ModelAdmin):
         "name",
     )
 
+    ordering = (
+        "name",
+    )
+
     prepopulated_fields = {
         "slug": ("name",)
     }
+
+    def product_count(self, obj):
+        return obj.products.count()
+
+    product_count.short_description = "Products"
 
 
 # ==========================================================
@@ -33,28 +43,33 @@ class CategoryAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
 
     list_display = (
-        "image_preview",
-        "title",
+       "image_preview",
+       "title",
+       "category",
+       "finish",
+       "featured_badge",
+       "created_at",
+)
+
+    list_filter = (
         "category",
         "finish",
         "is_featured",
         "created_at",
     )
 
-    list_filter = (
-        "category",
-        "finish",
-        "is_featured",
-    )
-
     search_fields = (
-        "title",
-        "technical_description",
-        "inlet_size",
-    )
+       "title",
+       "category__name",
+       "technical_description",
+       "finish",
+       "inlet_size",
+       "created_at",
+       )
 
     ordering = (
-        "title",
+        "-created_at",
+
     )
 
     list_editable = (
@@ -67,33 +82,46 @@ class ProductAdmin(admin.ModelAdmin):
 
     readonly_fields = (
         "image_preview_large",
-    )
+        "created_at",
+        "updated_at",
+   )
+    
 
     fieldsets = (
-        ("Basic Information", {
-            "fields": (
-                "title",
-                "slug",
-                "category",
-                "is_featured",
-            )
-        }),
 
-        ("Specifications", {
+        ("📦 Product Information", {
             "fields": (
+               "title",
+               "slug",
+               "category",
+               "is_featured",
+            )
+       }),
+
+        ("⚙️ Technical Specifications", {
+          "fields": (
                 "inlet_size",
                 "finish",
                 "technical_description",
             )
         }),
 
-        ("Product Image", {
+        ("🖼 Product Image", {
             "fields": (
-                "image",
                 "image_path",
                 "image_preview_large",
-            )
+           ),
+           "description": "Type the image filename exactly as it exists inside catalog/static/catalog/images/products/"
         }),
+ 
+        ("📅 System Information", {
+            "fields": (
+                "created_at",
+                "updated_at",
+            ),
+            "classes": ("collapse",),
+        }),
+
     )
     def image_preview(self, obj):
        if obj.image_path:
@@ -115,6 +143,18 @@ class ProductAdmin(admin.ModelAdmin):
     image_preview_large.short_description = "Preview"
 
 
+    def featured_badge(self, obj):
+       if obj.is_featured:
+            return format_html(
+               '<span style="background:#198754;color:white;padding:4px 10px;border-radius:20px;font-size:12px;">Featured</span>'
+            )
+
+       return format_html(
+            '<span style="background:#6c757d;color:white;padding:4px 10px;border-radius:20px;font-size:12px;">Normal</span>'
+        )
+
+    featured_badge.short_description = "Status"
+
 # ==========================================================
 # QUOTE INQUIRIES
 # ==========================================================
@@ -131,42 +171,60 @@ class QuoteInquiryAdmin(admin.ModelAdmin):
         "created_at",
     )
 
+    search_fields = (
+        "customer_name",
+        "company_name",
+        "email",
+        "phone_number",
+        "product__title",
+    )
+
     list_filter = (
         "created_at",
         "product",
     )
 
-    search_fields = (
-        "customer_name",
-        "company_name",
-        "email",
+    ordering = (
+        "-created_at",
     )
 
     readonly_fields = (
         "created_at",
     )
 
-
 # ==========================================================
 # CONTACT MESSAGES
 # ==========================================================
-
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
 
     list_display = (
         "full_name",
-        "email",
         "subject",
+        "email",
         "created_at",
     )
 
     search_fields = (
         "full_name",
-        "email",
         "subject",
+        "email",
+    )
+
+    ordering = (
+        "-created_at",
     )
 
     readonly_fields = (
         "created_at",
     )
+
+# ==========================================================
+# CUSTOM ADMIN BRANDING
+# ==========================================================
+
+admin.site.site_header = "NFC Industrial Administration"
+
+admin.site.site_title = "NFC Admin"
+
+admin.site.index_title = "Product & Customer Management"

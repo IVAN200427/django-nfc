@@ -44,7 +44,7 @@ class QuoteInquiryForm(forms.ModelForm):
             'message': forms.Textarea(attrs={
                 'class': 'form-control',
                 'rows': 6,
-                'placeholder': 'Tell us about your project...'
+                'placeholder': 'List the products you need, estimated quantities, and any technical specifications...'
             }),
         }        
 class ContactMessageForm(forms.ModelForm):
